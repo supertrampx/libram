@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Detail } from "./Detail";
-import { kindLabel, kindTone, memberOf } from "./explain";
+import { kindAccent, kindLabel, kindTone, memberOf } from "./explain";
 import { loadExamples, loadIndex, loadManifest, loadSystem, readRoute, writeRoute } from "./load";
 import { describedSystemSlugs, firstUnknownIndex, groupSymbols, surfaceIsDescribed, symbolIsDescribed, symbolProse } from "./outline";
 import { makeFuse, scopeSymbols, searchSymbols } from "./search";
@@ -135,7 +135,11 @@ export function App() {
   }, []);
 
   useEffect(() => {
-    const label = route.name ? `${route.name} · Libram` : version ? `${version.label} ${version.version} · Libram` : "Libram";
+    const label = route.name
+      ? `${route.name} · WoW Forever client API`
+      : version
+        ? `WoW Forever client API · ${version.version}`
+        : "WoW Forever client API";
     document.title = label;
   }, [route.name, version]);
 
@@ -309,7 +313,7 @@ export function App() {
             key={filter.id}
             type="button"
             onClick={() => setKind(filter.id)}
-            className={`rounded-full px-3 py-1 text-sm ${kind === filter.id ? "bg-gold text-ink" : "bg-raised text-mist hover:text-parchment"}`}
+            className={`rounded-full px-3 py-1 text-sm ${filterChipClass(filter.id, kind === filter.id)}`}
           >
             {filter.label}
           </button>
@@ -362,6 +366,7 @@ export function App() {
                 <>
                   <SurfaceGroup
                     title="APIs"
+                    tone="system"
                     surfaces={knownApis}
                     current={route.systemSlug}
                     onPick={(slug) => navigate({ versionId: version.id, systemSlug: slug })}
@@ -369,6 +374,7 @@ export function App() {
                   {showUnknown && (
                     <SurfaceGroup
                       title="Unknown"
+                      tone="system"
                       hint="The client never described these calls. Nothing in the build marks them unused."
                       surfaces={unknownApis}
                       current={route.systemSlug}
@@ -377,6 +383,7 @@ export function App() {
                   )}
                   <SurfaceGroup
                     title="Types"
+                    tone="table"
                     surfaces={typeSurfaces}
                     current={route.systemSlug}
                     onPick={(slug) => navigate({ versionId: version.id, systemSlug: slug })}
@@ -390,11 +397,11 @@ export function App() {
                       <button
                         type="button"
                         onClick={() => navigate({ versionId: version.id, systemSlug: system.slug })}
-                        className={`block w-full border-l-2 px-3 py-2 text-left ${selectedSystem ? "border-gold bg-raised" : "border-transparent hover:bg-raised/70"}`}
+                        className={`block w-full border-l-2 px-3 py-2 text-left ${navEdge(system, selectedSystem)}`}
                       >
                         <span className="block text-parchment">{system.name}</span>
-                        <span className="block truncate font-mono text-xs text-stone">
-                          {system.namespace || system.type} · {system.functions + system.events + system.tables}
+                        <span className="block truncate font-mono text-xs">
+                          <CountBits functions={system.functions} events={system.events} tables={system.tables} />
                         </span>
                       </button>
                     </li>
@@ -439,7 +446,7 @@ export function App() {
                     const start = listed.indexOf(group.items[0]);
                     return (
                       <li key={group.id}>
-                        <p className="px-3 pt-3 pb-1 text-xs uppercase tracking-wider text-stone">{group.title}</p>
+                        <p className={`px-3 pt-3 pb-1 text-xs uppercase tracking-wider ${kindTone(group.id)}`}>{group.title}</p>
                         <ul>
                           {group.items.map((symbol, position) => (
                             <SymbolRow
@@ -523,34 +530,35 @@ function SurfaceGroup({
   surfaces,
   current,
   onPick,
+  tone,
 }: {
   title: string;
   hint?: string;
   surfaces: SurfaceInfo[];
   current?: string;
   onPick: (slug: string) => void;
+  tone: string;
 }) {
   if (!surfaces.length) return null;
   return (
     <>
-      <li className="px-3 pt-3 pb-1 text-xs uppercase tracking-wider text-stone">
+      <li className={`px-3 pt-3 pb-1 text-xs uppercase tracking-wider ${title === "Unknown" ? "text-stone" : kindTone(tone)}`}>
         {title}
         {hint && <span className="mt-1 block text-[0.7rem] font-sans normal-case tracking-normal text-stone">{hint}</span>}
       </li>
       {surfaces.map((item) => {
         const selected = item.primarySlug === current || item.members.some((member) => member.slug === current);
-        const calls = item.functions + item.events;
         return (
           <li key={item.id}>
             <button
               type="button"
               onClick={() => onPick(item.primarySlug)}
-              className={`block w-full border-l-2 px-3 py-2 text-left ${selected ? "border-gold bg-raised" : "border-transparent hover:bg-raised/70"}`}
+              className={`block w-full border-l-2 px-3 py-2 text-left ${navEdge(item, selected)}`}
             >
               <span className="block text-parchment">{item.namespace || item.name}</span>
-              <span className="block truncate font-mono text-xs text-stone">
-                {item.namespace ? `${item.name} · ` : ""}
-                {calls > 0 ? `${item.functions} calls · ${item.events} events` : `${item.tables} types`}
+              <span className="block truncate font-mono text-xs">
+                {item.namespace ? <span className="text-stone">{item.name} · </span> : null}
+                <CountBits functions={item.functions} events={item.events} tables={item.tables} />
               </span>
             </button>
           </li>
@@ -558,6 +566,28 @@ function SurfaceGroup({
       })}
     </>
   );
+}
+
+function navEdge(item: { functions: number; events: number; tables: number }, selected: boolean) {
+  const accent = item.functions + item.events === 0 ? kindAccent("table") : item.functions === 0 ? kindAccent("event") : kindAccent("function");
+  return selected ? `${accent.border} ${accent.wash}` : `${accent.edge} hover:bg-raised/70`;
+}
+
+function CountBits({ functions, events, tables }: { functions: number; events: number; tables: number }) {
+  if (functions + events === 0) return <span className={kindTone("table")}>{tables} types</span>;
+  return (
+    <>
+      <span className={kindTone("function")}>{functions} calls</span>
+      <span className="text-stone"> · </span>
+      <span className={kindTone("event")}>{events} events</span>
+    </>
+  );
+}
+
+function filterChipClass(id: KindFilter, active: boolean) {
+  if (id === "all") return active ? "bg-gold text-ink" : "bg-raised text-mist hover:text-parchment";
+  const accent = kindAccent(id);
+  return active ? `${accent.wash} ${accent.text} ring-1 ring-current` : `bg-raised ${accent.text}`;
 }
 
 function SymbolRow({
@@ -578,6 +608,7 @@ function SymbolRow({
   onHover: () => void;
 }) {
   const prose = symbolProse(symbol);
+  const accent = kindAccent(symbol.kind);
   return (
     <li>
       {unknownHeading && <p className="px-3 pt-3 pb-1 text-xs uppercase tracking-wider text-stone">Unknown</p>}
@@ -585,11 +616,11 @@ function SymbolRow({
         type="button"
         onClick={onOpen}
         onMouseEnter={onHover}
-        className={`block w-full px-3 py-2 text-left ${active ? "bg-raised" : "hover:bg-raised/60"} ${picked ? "outline outline-1 -outline-offset-1 outline-gold" : ""}`}
+        className={`block w-full border-l-2 px-3 py-2 text-left ${accent.border} ${active || picked ? accent.wash : "hover:bg-raised/60"}`}
       >
         <span className="flex items-baseline justify-between gap-3">
-          <Highlight text={symbol.kind === "event" ? symbol.qualified : symbol.name} query={query} />
-          <span className={`shrink-0 text-xs uppercase tracking-wide ${kindTone(symbol.kind)}`}>{kindLabel(symbol.kind)}</span>
+          <Highlight text={symbol.kind === "event" ? symbol.qualified : symbol.name} query={query} tone={accent.text} />
+          <span className={`shrink-0 text-xs uppercase tracking-wide ${accent.text}`}>{kindLabel(symbol.kind)}</span>
         </span>
         {prose && <span className="mt-0.5 block truncate text-sm text-stone">{prose}</span>}
       </button>
@@ -597,12 +628,12 @@ function SymbolRow({
   );
 }
 
-function Highlight({ text, query }: { text: string; query: string }) {
+function Highlight({ text, query, tone }: { text: string; query: string; tone: string }) {
   const needle = query.trim();
   const index = needle ? text.toLowerCase().indexOf(needle.toLowerCase()) : -1;
-  if (index < 0) return <span className="font-mono text-sm text-parchment">{text}</span>;
+  if (index < 0) return <span className={`font-mono text-sm ${tone}`}>{text}</span>;
   return (
-    <span className="font-mono text-sm text-parchment">
+    <span className={`font-mono text-sm ${tone}`}>
       {text.slice(0, index)}
       <mark>{text.slice(index, index + needle.length)}</mark>
       {text.slice(index + needle.length)}

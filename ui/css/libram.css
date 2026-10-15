@@ -293,3 +293,183 @@ footer.footer a {
   color: #e2b45a;
   background: transparent;
 }
+
+body * {
+  scrollbar-color: #3d4233 transparent;
+}
+
+.doc h1.sect0 {
+  background: transparent;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.doc .quoteblock,
+.doc .verseblock,
+#preamble .abstract blockquote {
+  background: #1b1e16;
+  border: 1px solid #34392c;
+  border-left: 3px solid #e2b45a;
+  border-radius: 0.4rem;
+  color: #ebe6d4;
+}
+
+.doc .quoteblock .attribution,
+.doc .quoteblock cite {
+  color: #b2ac96;
+}
+
+.doc .admonitionblock td.content,
+.doc .sidebarblock,
+.doc .exampleblock > .content,
+.doc details.result > .content {
+  background: #1b1e16;
+  border: 1px solid #34392c;
+  border-radius: 0.4rem;
+  color: #ebe6d4;
+}
+
+.doc .admonitionblock td.icon i.icon-note {
+  background: #9ec0e6;
+  color: #13150f;
+}
+
+.doc .admonitionblock td.icon i.icon-tip {
+  background: #8fc9a3;
+  color: #13150f;
+}
+
+.doc .admonitionblock td.icon i.icon-warning,
+.doc .admonitionblock td.icon i.icon-caution {
+  background: #e2a15c;
+  color: #13150f;
+}
+
+.doc .admonitionblock td.icon i.icon-important {
+  background: #e0b0d8;
+  color: #13150f;
+}
+
+.doc .exampleblock .title,
+.doc .imageblock .title,
+.doc .listingblock .title,
+.doc .literalblock .title,
+.doc .openblock .title,
+.doc .videoblock .title,
+.doc .admonitionblock .title,
+.doc table.tableblock caption {
+  color: #b2ac96;
+}
+
+.doc table.tableblock,
+.doc table.tableblock > * > tr > * {
+  border-color: #34392c;
+}
+
+.doc table.tableblock > tfoot,
+.doc table.tableblock.stripes-all > tbody > tr,
+.doc table.tableblock.stripes-even > tbody > tr:nth-of-type(2n),
+.doc table.tableblock.stripes-odd > tbody > tr:nth-of-type(odd),
+.doc table.tableblock.stripes-hover > tbody > tr:hover {
+  background: #24281d;
+}
+
+.doc kbd {
+  background: #24281d;
+  border: 1px solid #34392c;
+  box-shadow: none;
+  color: #ebe6d4;
+}
+
+.doc .colist > table code {
+  background: #24281d;
+  color: #ebe6d4;
+}
+
+.doc .source-toolbox {
+  color: #b2ac96;
+}
+
+.nav-item.kind-function > .nav-link,
+.nav-item.kind-function > .nav-text,
+.doc p code.kind-function,
+.doc li code.kind-function,
+.doc td code.kind-function,
+.doc h1 code.kind-function,
+.doc h2 code.kind-function,
+.doc h3 code.kind-function,
+.doc dd code.kind-function {
+  color: #8fc9a3;
+}
+
+.nav-item.kind-event > .nav-link,
+.nav-item.kind-event > .nav-text,
+.doc p code.kind-event,
+.doc li code.kind-event,
+.doc td code.kind-event,
+.doc h1 code.kind-event,
+.doc h2 code.kind-event,
+.doc h3 code.kind-event,
+.doc dd code.kind-event {
+  color: #e0b0d8;
+}
+
+.nav-item.kind-table > .nav-link,
+.nav-item.kind-table > .nav-text,
+.doc p code.kind-table,
+.doc li code.kind-table,
+.doc td code.kind-table,
+.doc h1 code.kind-table,
+.doc h2 code.kind-table,
+.doc h3 code.kind-table,
+.doc dd code.kind-table {
+  color: #9ec0e6;
+}
+
+.nav-item.kind-system > .nav-link,
+.nav-item.kind-system > .nav-text,
+.doc p code.kind-system,
+.doc li code.kind-system,
+.doc td code.kind-system,
+.doc h1 code.kind-system,
+.doc h2 code.kind-system,
+.doc h3 code.kind-system,
+.doc dd code.kind-system {
+  color: #e2a15c;
+}
+
+.nav-item.kind-enum > .nav-link,
+.nav-item.kind-enum > .nav-text,
+.doc p code.kind-enum,
+.doc li code.kind-enum,
+.doc td code.kind-enum,
+.doc h1 code.kind-enum,
+.doc h2 code.kind-enum,
+.doc h3 code.kind-enum,
+.doc dd code.kind-enum {
+  color: #e2b45a;
+}
+
+.nav-item[class*="kind-"] > .nav-link,
+.nav-item[class*="kind-"] > .nav-text {
+  box-shadow: inset 2px 0 0 color-mix(in srgb, currentColor 45%, transparent);
+  padding-left: 0.55rem;
+}
+
+.nav-item.is-current-page[class*="kind-"] > .nav-link {
+  background: color-mix(in srgb, currentColor 10%, transparent);
+  box-shadow: inset 2px 0 0 currentColor;
+}
+
+.doc p code[class*="kind-"],
+.doc li code[class*="kind-"],
+.doc td code[class*="kind-"],
+.doc h1 code[class*="kind-"],
+.doc h2 code[class*="kind-"],
+.doc h3 code[class*="kind-"],
+.doc dd code[class*="kind-"] {
+  background: color-mix(in srgb, currentColor 12%, #24281d);
+  box-shadow: inset 2px 0 0 currentColor;
+}

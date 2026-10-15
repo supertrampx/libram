@@ -61,11 +61,16 @@ export function kindLabel(kind: SymbolKind | string) {
   return "Table";
 }
 
+export function kindAccent(kind: string) {
+  if (kind === "function") return { text: "text-foam", border: "border-foam", edge: "border-foam/45", wash: "bg-foam/10" };
+  if (kind === "event") return { text: "text-lilac", border: "border-lilac", edge: "border-lilac/45", wash: "bg-lilac/10" };
+  if (kind === "enumeration" || kind === "constants") return { text: "text-gold", border: "border-gold", edge: "border-gold/45", wash: "bg-gold/10" };
+  if (kind === "system") return { text: "text-warn", border: "border-warn", edge: "border-warn/45", wash: "bg-warn/10" };
+  return { text: "text-sky", border: "border-sky", edge: "border-sky/45", wash: "bg-sky/10" };
+}
+
 export function kindTone(kind: string) {
-  if (kind === "function") return "text-foam";
-  if (kind === "event") return "text-lilac";
-  if (kind === "enumeration" || kind === "constants") return "text-gold";
-  return "text-sky";
+  return kindAccent(kind).text;
 }
 
 export function functionSignature(system: SystemDoc, fn: FunctionDoc) {

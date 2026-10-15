@@ -12,6 +12,7 @@ import {
   isOptional,
   isTable,
   kindLabel,
+  kindAccent,
   kindTone,
   otherFlags,
   restrictionNotes,
@@ -109,22 +110,21 @@ function Welcome({ version, onOpenHelp }: { version: VersionInfo; onOpenHelp: ()
   const ingested = new Date(version.ingestedAt).toLocaleString();
   return (
     <article className="mx-auto max-w-3xl px-8 py-10">
-      <p className="text-sm uppercase tracking-[0.18em] text-gold">Client API</p>
-      <h2 className="mt-2 text-4xl font-semibold tracking-tight text-parchment">A build you can search.</h2>
+      <h2 className="text-4xl font-semibold tracking-tight text-parchment">WoW Forever client API</h2>
+      <p className="mt-2 font-mono text-xl text-gold">{version.version}</p>
       <p className="mt-4 max-w-2xl text-lg leading-relaxed text-mist">
         Libram reads the documentation tables the game writes with <code className="font-mono text-parchment">ExportInterfaceFiles code</code>.
         The descriptions on these pages are quoted from the World of Warcraft client. Each ingest is kept, so you can switch builds when a patch
         moves a signature.
       </p>
       <dl className="mt-8 grid gap-3 sm:grid-cols-4">
-        <Stat label="Systems" value={version.counts.systems} />
-        <Stat label="Functions" value={version.counts.functions} />
-        <Stat label="Events" value={version.counts.events} />
-        <Stat label="Tables" value={version.counts.tables} />
+        <Stat label="Systems" value={version.counts.systems} kind="system" />
+        <Stat label="Functions" value={version.counts.functions} kind="function" />
+        <Stat label="Events" value={version.counts.events} kind="event" />
+        <Stat label="Tables" value={version.counts.tables} kind="table" />
       </dl>
       <p className="mt-6 text-mist">
-        Showing <span className="text-parchment">{version.label}</span>{" "}
-        <span className="font-mono text-parchment">{version.version}</span>
+        Showing <span className="text-parchment">{version.label}</span>
         {version.latest ? " · latest ingested for this client" : " · older snapshot"}. Ingested {ingested}.
       </p>
       <section className="mt-8 max-w-2xl border-t border-line pt-6 text-mist">
@@ -148,11 +148,12 @@ function Welcome({ version, onOpenHelp }: { version: VersionInfo; onOpenHelp: ()
   );
 }
 
-function Stat({ label, value }: { label: string; value: number }) {
+function Stat({ label, value, kind }: { label: string; value: number; kind: string }) {
+  const accent = kindAccent(kind);
   return (
-    <div className="rounded-md border border-line bg-panel px-3 py-3">
-      <dt className="text-xs uppercase tracking-wider text-stone">{label}</dt>
-      <dd className="mt-1 font-mono text-xl text-parchment">{value.toLocaleString()}</dd>
+    <div className={`rounded-md border px-3 py-3 ${accent.border} ${accent.wash}`}>
+      <dt className={`text-xs uppercase tracking-wider ${accent.text}`}>{label}</dt>
+      <dd className={`mt-1 font-mono text-xl ${accent.text}`}>{value.toLocaleString()}</dd>
     </div>
   );
 }
@@ -203,18 +204,19 @@ function SystemOverview({
       )}
       {groups.map((group) => (
         <section key={group.id} className="mt-8">
-          <h3 className="text-sm uppercase tracking-[0.14em] text-stone">{group.title}</h3>
+          <h3 className={`text-sm uppercase tracking-[0.14em] ${kindTone(group.id)}`}>{group.title}</h3>
           <ul className="mt-3 divide-y divide-line border-y border-line">
             {group.items.map((symbol, position) => {
               const prose = symbolProse(symbol);
               const label = symbol.kind === "event" ? symbol.qualified : symbol.name;
+              const accent = kindAccent(symbol.kind);
               const unknownHeading =
                 (group.id === "function" || group.id === "event") && position === firstUnknownIndex(group.items);
               return (
                 <li key={symbol.id}>
                   {unknownHeading && <p className="pt-4 pb-1 text-xs uppercase tracking-wider text-stone">Unknown</p>}
-                  <button type="button" onClick={() => onOpenSymbol(symbol)} className="block w-full py-3 text-left hover:text-gold">
-                    <span className="font-mono text-parchment">{label}</span>
+                  <button type="button" onClick={() => onOpenSymbol(symbol)} className={`block w-full border-l-2 py-3 pl-3 text-left ${accent.border} hover:bg-raised/70`}>
+                    <span className={`font-mono ${accent.text}`}>{label}</span>
                     {prose && <span className="mt-1 block text-sm leading-relaxed text-mist">{prose}</span>}
                   </button>
                 </li>
