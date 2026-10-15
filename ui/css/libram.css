@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
 
 html {
   scrollbar-color: #3d4233 #13150f;
@@ -8,6 +8,9 @@ body {
   background: #13150f;
   color: #ebe6d4;
   font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 code,
@@ -40,6 +43,23 @@ a.navbar-item:hover,
 .navbar-end .navbar-link:hover {
   color: #ebe6d4;
   background: transparent;
+}
+
+a.navbar-item.lua-word {
+  color: #ebe6d4;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+a.navbar-item.lua-word .lua-ver,
+a.navbar-item.lua-word:hover .lua-ver {
+  color: #e2b45a;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.78em;
+  font-weight: 500;
+  letter-spacing: 0;
+  margin-left: 0.28rem;
 }
 
 .navbar-burger span {
@@ -117,7 +137,7 @@ a.navbar-item:hover,
 }
 
 .breadcrumbs {
-  color: #7d7866;
+  color: #b2ac96;
 }
 
 .doc {
@@ -470,6 +490,93 @@ body * {
 .doc h2 code[class*="kind-"],
 .doc h3 code[class*="kind-"],
 .doc dd code[class*="kind-"] {
-  background: color-mix(in srgb, currentColor 12%, #24281d);
-  box-shadow: inset 2px 0 0 currentColor;
+  background: transparent;
+  box-shadow: none;
+  font-weight: 500;
+  padding: 0;
+}
+
+main > .content,
+article.doc,
+.doc .listingblock,
+.doc .literalblock,
+.doc .listingblock > .content {
+  min-width: 0;
+}
+
+.doc {
+  color: #ebe6d4;
+  flex: 1 1 auto;
+  font-size: 1rem;
+  font-weight: 400;
+  hyphens: none;
+  -webkit-hyphens: none;
+  line-height: 1.6;
+  max-width: none;
+  min-width: 0;
+  overflow-wrap: break-word;
+  width: auto;
+  word-wrap: break-word;
+}
+
+.doc h1,
+.doc h2,
+.doc h3,
+.doc h4,
+.doc h5,
+.doc h6 {
+  font-weight: 600;
+  hyphens: none;
+  line-height: 1.25;
+}
+
+.doc h2 {
+  margin-top: 1.75rem;
+}
+
+.doc .paragraph,
+.doc .ulist,
+.doc .olist,
+.doc .listingblock,
+.doc .quoteblock,
+.doc .literalblock {
+  margin-top: 1.25rem;
+}
+
+.doc li + li {
+  margin-top: 0.55rem;
+}
+
+.doc a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.doc a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.doc pre,
+.doc .listingblock pre,
+.doc .literalblock pre,
+.doc pre.highlight > code {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.doc .quoteblock,
+.doc .verseblock {
+  line-height: 1.6;
+}
+
+a:focus-visible,
+button:focus-visible,
+#search-input:focus,
+#search-input:focus-visible {
+  outline: 2px solid #e2b45a;
+  outline-offset: 3px;
 }

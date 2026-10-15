@@ -4,8 +4,13 @@ const base = import.meta.env.BASE_URL;
 
 async function getJson<T>(url: string): Promise<T> {
   const response = await fetch(url);
-  if (!response.ok) throw new Error(`Could not load ${url} (${response.status})`);
-  return response.json() as Promise<T>;
+  const text = await response.text();
+  const html = text.trimStart().startsWith("<");
+  if (!response.ok || html) {
+    const missing = html || response.status === 404;
+    throw new Error(missing ? "That file is not in this build." : `Could not load ${url} (${response.status})`);
+  }
+  return JSON.parse(text) as T;
 }
 
 export function loadManifest(): Promise<Manifest> {

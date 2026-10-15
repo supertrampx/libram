@@ -6,10 +6,12 @@
   --color-ink: #13150f;
   --color-panel: #1b1e16;
   --color-raised: #24281d;
+  --color-band: #30362a;
+  --color-slate: #2c3344;
   --color-line: #34392c;
   --color-parchment: #ebe6d4;
   --color-mist: #b2ac96;
-  --color-stone: #7d7866;
+  --color-stone: #9a937f;
   --color-gold: #e2b45a;
   --color-foam: #8fc9a3;
   --color-lilac: #e0b0d8;
@@ -43,6 +45,61 @@ mark {
 
 code {
   font-family: var(--font-mono);
+}
+
+code.console {
+  display: inline-block;
+  margin: 0 0 0 0.2em;
+  padding: 0.02em 0.45em 0.06em;
+  border: 1px solid #3d4634;
+  border-radius: 0.3rem;
+  background: #0c0e0a;
+  color: #c6e7cf;
+  font-size: 0.86em;
+  font-weight: 500;
+  line-height: 1.45;
+  white-space: nowrap;
+  vertical-align: 0.04em;
+  box-shadow: inset 0 0 0 1px rgb(143 201 163 / 14%);
+}
+
+code.console::before {
+  content: "> ";
+  color: var(--color-gold);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  margin: 0.2rem 0 0;
+  border: 1px solid var(--color-stone);
+  border-radius: 0.2rem;
+  background: var(--color-ink);
+  display: grid;
+  place-content: center;
+  flex: none;
+}
+
+input[type="checkbox"]:checked {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+input[type="checkbox"]:checked::after {
+  content: "";
+  width: 0.3rem;
+  height: 0.55rem;
+  border: solid var(--color-ink);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+input[type="checkbox"]:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
 }
 
 .sr-only {

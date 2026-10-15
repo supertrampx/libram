@@ -360,17 +360,34 @@ function countsOf(systems) {
   };
 }
 
+function writeTextAtomic(file, text) {
+  const tmp = `${file}.${process.pid}.tmp`;
+  fs.writeFileSync(tmp, text);
+  fs.renameSync(tmp, file);
+}
+
 function writeVersion(id, systems, index) {
   const dir = path.join(dataRoot, id);
-  fs.rmSync(dir, { recursive: true, force: true });
-  const systemDir = path.join(dir, "systems");
+  const staging = path.join(dataRoot, `.incoming-${id}`);
+  const backup = path.join(dataRoot, `.backup-${id}`);
+  fs.rmSync(staging, { recursive: true, force: true });
+  const systemDir = path.join(staging, "systems");
   fs.mkdirSync(systemDir, { recursive: true });
   for (const system of systems) {
     const { file, ...publicSystem } = system;
     fs.writeFileSync(path.join(systemDir, `${system.slug}.json`), JSON.stringify(publicSystem));
     void file;
   }
-  fs.writeFileSync(path.join(dir, "index.json"), JSON.stringify(index));
+  fs.writeFileSync(path.join(staging, "index.json"), JSON.stringify(index));
+  fs.rmSync(backup, { recursive: true, force: true });
+  if (fs.existsSync(dir)) fs.renameSync(dir, backup);
+  try {
+    fs.renameSync(staging, dir);
+  } catch (error) {
+    if (fs.existsSync(backup) && !fs.existsSync(dir)) fs.renameSync(backup, dir);
+    throw error;
+  }
+  fs.rmSync(backup, { recursive: true, force: true });
 }
 
 function ingestOne({ product, version, label, dump }) {
@@ -394,11 +411,12 @@ function ingestOne({ product, version, label, dump }) {
   const versions = markLatest([...manifest.versions.filter((item) => item.id !== id), entry]);
   const next = { updated: entry.ingestedAt, versions };
   fs.mkdirSync(dataRoot, { recursive: true });
-  fs.writeFileSync(manifestPath, `${JSON.stringify(next, null, 2)}\n`);
+  writeTextAtomic(manifestPath, `${JSON.stringify(next, null, 2)}\n`);
   console.log(
     `Ingested ${label} ${version}: ${counts.systems} systems, ${counts.functions} functions, ${counts.events} events, ${counts.tables} tables.`,
   );
   console.log(`Wrote public/data/${id}`);
+  console.log("Examples and notes were left in place.");
 }
 
 function resolveIngest(options) {
@@ -495,7 +513,7 @@ function reportChanges(product) {
     changed: diff.changed.map((item) => ({ ...briefCall(item), before: item.before, after: item.after })),
   };
   fs.mkdirSync(examplesRoot, { recursive: true });
-  fs.writeFileSync(changesPath, `${JSON.stringify(report, null, 2)}\n`);
+  writeTextAtomic(changesPath, `${JSON.stringify(report, null, 2)}\n`);
   if (!pair.previous) {
     console.log(`${pair.current.label} ${pair.current.version} is the only ingested build.`);
     console.log("The next ingest of a newer build will list calls that appeared, disappeared, or changed arguments.");
@@ -571,7 +589,13 @@ const command = options._[0] || "status";
 if (command === "status") {
   process.exitCode = printStatus(clientState(wowRoot()));
 } else if (command === "ingest") {
-  for (const job of resolveIngest(options)) ingestOne(job);
+  const jobs = resolveIngest(options);
+  const products = new Set();
+  for (const job of jobs) {
+    ingestOne(job);
+    products.add(job.product);
+  }
+  for (const product of products) reportChanges(product);
 } else if (command === "watch") {
   const interval = Number(options.interval || 300);
   if (!Number.isFinite(interval) || interval < 15) fail("--interval must be at least 15 seconds");

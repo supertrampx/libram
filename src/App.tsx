@@ -1,9 +1,9 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { memo, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { Detail } from "./Detail";
 import { kindAccent, kindLabel, kindTone, memberOf } from "./explain";
 import { loadExamples, loadIndex, loadManifest, loadSystem, readRoute, writeRoute } from "./load";
 import { describedSystemSlugs, firstUnknownIndex, groupSymbols, surfaceIsDescribed, symbolIsDescribed, symbolProse } from "./outline";
-import { makeFuse, scopeSymbols, searchSymbols } from "./search";
+import { makeFuse, matchingSurface, prepareSymbols, scopeSymbols, searchSymbols, surfaceForResults } from "./search";
 import type { CallExample, KindFilter, Manifest, RouteState, SurfaceInfo, SymbolEntry, VersionIndex, VersionInfo } from "./types";
 
 const FILTERS: { id: KindFilter; label: string }[] = [
@@ -21,6 +21,7 @@ export function App() {
   const [error, setError] = useState<string | null>(null);
   const [route, setRoute] = useState<RouteState>(() => readRoute());
   const [query, setQuery] = useState("");
+  const deferredQuery = useDeferredValue(query);
   const [kind, setKind] = useState<KindFilter>("all");
   const [systemQuery, setSystemQuery] = useState("");
   const [active, setActive] = useState(0);
@@ -28,11 +29,14 @@ export function App() {
   const [versionOpen, setVersionOpen] = useState(false);
   const [narrow, setNarrow] = useState(false);
   const searchRef = useRef<HTMLInputElement>(null);
+  const fuseCache = useRef<{ source: SymbolEntry[]; fuse: ReturnType<typeof makeFuse> } | null>(null);
+  const [pinned, setPinned] = useState(() => Boolean(readRoute().systemSlug));
   const cache = useRef(new Map<string, Awaited<ReturnType<typeof loadSystem>>>());
   const [systemDoc, setSystemDoc] = useState<Awaited<ReturnType<typeof loadSystem>> | null>(null);
   const [systemLoading, setSystemLoading] = useState(false);
   const [examples, setExamples] = useState<Record<string, CallExample>>({});
   const [showUnknown, setShowUnknown] = useState(() => localStorage.getItem("libram.showUnknown") === "1");
+  const [systemError, setSystemError] = useState<string | null>(null);
 
   const version = manifest?.versions.find((item) => item.id === route.versionId) ?? null;
 
@@ -47,7 +51,7 @@ export function App() {
   }, []);
 
   useEffect(() => {
-    const media = window.matchMedia("(max-width: 960px)");
+    const media = window.matchMedia("(max-width: 1023px)");
     const apply = () => setNarrow(media.matches);
     apply();
     media.addEventListener("change", apply);
@@ -80,7 +84,10 @@ export function App() {
     setIndex(null);
     loadIndex(version.id, version.ingestedAt)
       .then((data) => {
-        if (!cancelled) setIndex(data);
+        if (!cancelled) {
+          setIndex(data);
+          setError(null);
+        }
       })
       .catch((reason: Error) => {
         if (!cancelled) setError(reason.message);
@@ -93,17 +100,26 @@ export function App() {
   useEffect(() => {
     if (!version || !route.systemSlug) {
       setSystemDoc(null);
+      setSystemError(null);
+      return;
+    }
+    if (index && !index.systems.some((system) => system.slug === route.systemSlug)) {
+      setSystemDoc(null);
+      setSystemError("This API is not in this build.");
+      setSystemLoading(false);
       return;
     }
     const key = `${version.id}/${route.systemSlug}`;
     const cached = cache.current.get(key);
     if (cached) {
       setSystemDoc(cached);
+      setSystemError(null);
       setSystemLoading(false);
       return;
     }
     let cancelled = false;
     setSystemDoc(null);
+    setSystemError(null);
     setSystemLoading(true);
     loadSystem(version.id, route.systemSlug, version.ingestedAt)
       .then((doc) => {
@@ -111,7 +127,7 @@ export function App() {
         if (!cancelled) setSystemDoc(doc);
       })
       .catch((reason: Error) => {
-        if (!cancelled) setError(reason.message);
+        if (!cancelled) setSystemError(reason.message);
       })
       .finally(() => {
         if (!cancelled) setSystemLoading(false);
@@ -119,7 +135,7 @@ export function App() {
     return () => {
       cancelled = true;
     };
-  }, [version, route.systemSlug]);
+  }, [version, route.systemSlug, index]);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -150,29 +166,55 @@ export function App() {
     return route.systemSlug ? [route.systemSlug] : null;
   }, [index, route.systemSlug]);
   const scoped = useMemo(
-    () => (index ? scopeSymbols(index.symbols, kind, surfaceSlugs) : []),
-    [index, kind, surfaceSlugs],
+    () => (index ? scopeSymbols(index.symbols, kind, pinned ? surfaceSlugs : null) : []),
+    [index, kind, surfaceSlugs, pinned],
   );
   const describedSlugs = useMemo(() => describedSystemSlugs(index?.symbols ?? []), [index]);
-  const hideUndescribed = !showUnknown && (!surface || surfaceIsDescribed(surface, describedSlugs));
+  const hideUndescribed = !showUnknown && (!pinned || !surface || surfaceIsDescribed(surface, describedSlugs));
   const shown = useMemo(
     () => (hideUndescribed ? scoped.filter(symbolIsDescribed) : scoped),
     [scoped, hideUndescribed],
   );
   const outline = useMemo(() => groupSymbols(shown), [shown]);
-  const fuse = useMemo(() => makeFuse(shown), [shown]);
+  const prepared = useMemo(() => prepareSymbols(shown), [shown]);
   const results = useMemo(
-    () => searchSymbols(shown, fuse, query, Boolean(route.systemSlug)),
-    [shown, fuse, query, route.systemSlug],
+    () =>
+      searchSymbols(prepared, deferredQuery, Boolean(route.systemSlug), (text) => {
+        if (fuseCache.current?.source !== shown) fuseCache.current = { source: shown, fuse: makeFuse(shown) };
+        return fuseCache.current.fuse.search(text, { limit: 40 }).map((result) => result.item);
+      }),
+    [prepared, deferredQuery, route.systemSlug, shown],
   );
-  const browsingCalls = Boolean(surfaceSlugs) && !query.trim();
+  const browsingCalls = Boolean(surfaceSlugs) && !deferredQuery.trim();
   const listed = browsingCalls ? outline.flatMap((group) => group.items) : results.items;
   const concealed = useMemo(
     () => (hideUndescribed ? scoped.filter((symbol) => !symbolIsDescribed(symbol)).length : 0),
     [scoped, hideUndescribed],
   );
 
-  useEffect(() => setActive(0), [query, kind, route.systemSlug, route.versionId, showUnknown]);
+  useEffect(() => setActive(0), [deferredQuery, kind, route.systemSlug, route.versionId, showUnknown]);
+
+  useEffect(() => {
+    const trimmed = deferredQuery.trim();
+    if (!version) return;
+    if (!trimmed) {
+      if (pinned || !route.systemSlug) return;
+      const next = { versionId: version.id };
+      writeRoute(next, true);
+      setRoute(next);
+      return;
+    }
+    if (pinned) return;
+    const surfaces = index?.surfaces;
+    if (!surfaces?.length) return;
+    const target = matchingSurface(surfaces, trimmed) ?? (trimmed.length >= 3 ? surfaceForResults(surfaces, results.items) : null);
+    if (!target) return;
+    const already = target.primarySlug === route.systemSlug || target.members.some((member) => member.slug === route.systemSlug);
+    if (already) return;
+    const next = { versionId: version.id, systemSlug: target.primarySlug };
+    writeRoute(next, true);
+    setRoute(next);
+  }, [deferredQuery, results.items, index, version, route.systemSlug, pinned]);
 
   function navigate(next: RouteState, replace = false) {
     writeRoute(next, replace);
@@ -182,8 +224,19 @@ export function App() {
 
   function openSymbol(symbol: SymbolEntry) {
     if (!version) return;
+    setPinned(true);
     navigate({ versionId: version.id, systemSlug: symbol.systemSlug, kind: symbol.kind, name: symbol.name });
   }
+
+  const pickSurface = useCallback((slug: string) => {
+    setPinned(true);
+    setRoute((current) => {
+      const next = { versionId: current.versionId, systemSlug: slug };
+      writeRoute(next, false);
+      if (next.versionId) localStorage.setItem("libram.version", next.versionId);
+      return next;
+    });
+  }, []);
 
   function openType(typeName: string) {
     const refs = index?.types[typeName];
@@ -192,6 +245,7 @@ export function App() {
       refs.find((item) => surfaceSlugs?.includes(item.systemSlug)) ??
       refs.find((item) => item.systemSlug === route.systemSlug) ??
       refs[0];
+    setPinned(true);
     navigate({ versionId: version.id, systemSlug: match.systemSlug, kind: match.kind, name: match.name });
   }
 
@@ -202,28 +256,36 @@ export function App() {
   const member = systemDoc && selected ? memberOf(systemDoc, selected.kind, selected.name) : null;
   const needle = systemQuery.trim().toLowerCase();
   const catalog = index?.surfaces?.length ? index.surfaces : null;
-  const visibleSurfaces = (catalog ?? []).filter((item) => {
-    if (!needle) return true;
-    return (
-      item.name.toLowerCase().includes(needle) ||
-      (item.namespace || "").toLowerCase().includes(needle) ||
-      item.namespaces.some((namespace) => namespace.toLowerCase().includes(needle)) ||
-      item.members.some((member) => member.name.toLowerCase().includes(needle))
-    );
-  });
-  const apiSurfaces = visibleSurfaces.filter((item) => item.functions + item.events > 0);
-  const knownApis = apiSurfaces.filter((item) => surfaceIsDescribed(item, describedSlugs));
-  const unknownApis = apiSurfaces.filter((item) => !surfaceIsDescribed(item, describedSlugs));
-  const unknownTotal = (catalog ?? []).filter((item) => item.functions + item.events > 0 && !surfaceIsDescribed(item, describedSlugs)).length;
-  const typeSurfaces = visibleSurfaces.filter((item) => item.functions + item.events === 0);
-  const systems = (index?.systems ?? []).filter((system) => {
-    if (!needle) return true;
-    return system.name.toLowerCase().includes(needle) || (system.namespace || "").toLowerCase().includes(needle);
-  });
+  const apiLists = useMemo(() => {
+    const visible = (catalog ?? []).filter((item) => {
+      if (!needle) return true;
+      return (
+        item.name.toLowerCase().includes(needle) ||
+        (item.namespace || "").toLowerCase().includes(needle) ||
+        item.namespaces.some((namespace) => namespace.toLowerCase().includes(needle)) ||
+        item.members.some((member) => member.name.toLowerCase().includes(needle))
+      );
+    });
+    const apis = visible.filter((item) => item.functions + item.events > 0);
+    return {
+      known: apis.filter((item) => surfaceIsDescribed(item, describedSlugs)),
+      unknown: apis.filter((item) => !surfaceIsDescribed(item, describedSlugs)),
+      types: visible.filter((item) => item.functions + item.events === 0),
+      unknownTotal: (catalog ?? []).filter((item) => item.functions + item.events > 0 && !surfaceIsDescribed(item, describedSlugs)).length,
+    };
+  }, [catalog, needle, describedSlugs]);
+  const systems = useMemo(
+    () =>
+      (index?.systems ?? []).filter((system) => {
+        if (!needle) return true;
+        return system.name.toLowerCase().includes(needle) || (system.namespace || "").toLowerCase().includes(needle);
+      }),
+    [index, needle],
+  );
   const showBrowser = !narrow || !route.systemSlug || (Boolean(query.trim()) && !route.name);
   const showDetail = !narrow || Boolean(route.name) || (Boolean(route.systemSlug) && !query.trim());
 
-  if (error) {
+  if (error && !manifest) {
     return (
       <main className="grid h-dvh place-items-center px-6 text-center">
         <div>
@@ -254,7 +316,11 @@ export function App() {
       <header className="flex flex-wrap items-center gap-x-3 gap-y-2 border-b border-line px-4 py-3">
         <button
           type="button"
-          onClick={() => navigate({ versionId: version.id })}
+          onClick={() => {
+            setPinned(false);
+            setQuery("");
+            navigate({ versionId: version.id });
+          }}
           className="flex items-center gap-2 text-left"
         >
           <Mark />
@@ -323,7 +389,7 @@ export function App() {
             ? "Indexing…"
             : browsingCalls
               ? `${listed.length.toLocaleString()} in this API`
-              : query.trim() || route.systemSlug
+              : deferredQuery.trim() || route.systemSlug
                 ? results.total > results.items.length
                   ? `${results.items.length.toLocaleString()} of ${results.total.toLocaleString()}`
                   : `${results.total.toLocaleString()} shown`
@@ -333,14 +399,14 @@ export function App() {
       <div className="grid min-h-0 flex-1 grid-cols-1 lg:grid-cols-[260px_340px_minmax(0,1fr)]">
         {showBrowser && (
           <aside className="flex min-h-0 flex-col border-b border-line lg:border-r lg:border-b-0">
-            <label className="border-b border-line px-3 py-2">
+            <label className="flex h-10 shrink-0 items-center border-b border-line bg-band px-3">
               <span className="sr-only">Filter systems</span>
               <input
                 value={systemQuery}
                 onChange={(event) => setSystemQuery(event.target.value)}
                 placeholder="APIs"
                 aria-label="Filter APIs"
-                className="w-full bg-transparent text-sm text-parchment outline-none placeholder:text-stone"
+                className={`h-5 w-full bg-transparent p-0 leading-5 outline-none placeholder:text-stone ${systemQuery ? "text-sm tracking-normal text-parchment normal-case" : "text-xs tracking-wider text-stone uppercase"}`}
               />
             </label>
             <label className="flex items-start gap-2 border-b border-line px-3 py-2 text-sm text-mist">
@@ -357,7 +423,7 @@ export function App() {
               <span>
                 Show unknown
                 <span className="mt-0.5 block text-xs leading-relaxed text-stone">
-                  {unknownTotal.toLocaleString()} APIs have no client description and stay hidden. A later build that describes a call moves it into the list on its own.
+                  {apiLists.unknownTotal.toLocaleString()} APIs have no client description and stay hidden. A later build that describes a call moves it into the list on its own.
                 </span>
               </span>
             </label>
@@ -367,42 +433,48 @@ export function App() {
                   <SurfaceGroup
                     title="APIs"
                     tone="system"
-                    surfaces={knownApis}
+                    surfaces={apiLists.known}
                     current={route.systemSlug}
-                    onPick={(slug) => navigate({ versionId: version.id, systemSlug: slug })}
+                    onPick={pickSurface}
                   />
                   {showUnknown && (
                     <SurfaceGroup
                       title="Unknown"
                       tone="system"
                       hint="The client never described these calls. Nothing in the build marks them unused."
-                      surfaces={unknownApis}
+                      surfaces={apiLists.unknown}
                       current={route.systemSlug}
-                      onPick={(slug) => navigate({ versionId: version.id, systemSlug: slug })}
+                      onPick={pickSurface}
                     />
                   )}
                   <SurfaceGroup
                     title="Types"
                     tone="table"
-                    surfaces={typeSurfaces}
+                    surfaces={apiLists.types}
                     current={route.systemSlug}
-                    onPick={(slug) => navigate({ versionId: version.id, systemSlug: slug })}
+                    onPick={pickSurface}
                   />
                 </>
               ) : (
                 systems.map((system) => {
                   const selectedSystem = system.slug === route.systemSlug;
                   return (
-                    <li key={system.slug}>
+                    <li key={system.slug} className="border-b border-line">
                       <button
                         type="button"
-                        onClick={() => navigate({ versionId: version.id, systemSlug: system.slug })}
-                        className={`block w-full border-l-2 px-3 py-2 text-left ${navEdge(system, selectedSystem)}`}
+                        onClick={() => {
+                          setPinned(true);
+                          navigate({ versionId: version.id, systemSlug: system.slug });
+                        }}
+                        className={`block w-full border-l-2 px-3 py-2.5 text-left ${navEdge(system, selectedSystem)}`}
                       >
-                        <span className="block text-parchment">{system.name}</span>
-                        <span className="block truncate font-mono text-xs">
-                          <CountBits functions={system.functions} events={system.events} tables={system.tables} />
-                        </span>
+                        <ApiRowText
+                          name={system.name}
+                          namespace={system.namespace}
+                          functions={system.functions}
+                          events={system.events}
+                          tables={system.tables}
+                        />
                       </button>
                     </li>
                   );
@@ -413,13 +485,14 @@ export function App() {
         )}
         {showBrowser && (
           <section className="flex min-h-0 flex-col border-b border-line lg:border-r lg:border-b-0" aria-live="polite">
-            <div className="flex items-center justify-between border-b border-line px-3 py-2 text-xs uppercase tracking-wider text-stone">
-              <span>{surface ? surface.namespace || surface.name : route.systemSlug ? index?.systems.find((system) => system.slug === route.systemSlug)?.name : "Results"}</span>
+            <div className="flex h-10 shrink-0 items-center justify-between gap-3 border-b border-line bg-slate px-3 text-xs leading-5 uppercase tracking-wider text-stone">
+              <span className="min-w-0 truncate">{surface ? surface.namespace || surface.name : route.systemSlug ? index?.systems.find((system) => system.slug === route.systemSlug)?.name : "Results"}</span>
               {(query || route.systemSlug) && (
                 <button
                   type="button"
                   className="normal-case tracking-normal text-gold"
                   onClick={() => {
+                    setPinned(false);
                     setQuery("");
                     navigate({ versionId: version.id });
                   }}
@@ -437,8 +510,9 @@ export function App() {
               </p>
             )}
             <ul className="min-h-0 flex-1 overflow-auto">
-              {!index && <li className="px-3 py-4 text-mist">Loading this build…</li>}
-              {index && !query.trim() && !route.systemSlug && (
+              {error && <li className="px-3 py-4 text-warn">{error}</li>}
+              {!index && !error && <li className="px-3 py-4 text-mist">Loading this build…</li>}
+              {index && !deferredQuery.trim() && !route.systemSlug && (
                 <li className="px-3 py-4 leading-relaxed text-mist">Type at least a few letters, or pick an API. Exact names rank first; a typo falls through to fuzzy search.</li>
               )}
               {browsingCalls
@@ -452,7 +526,7 @@ export function App() {
                             <SymbolRow
                               key={symbol.id}
                               symbol={symbol}
-                              query={query}
+                              query={deferredQuery}
                               active={start + position === active}
                               picked={selected?.id === symbol.id}
                               onOpen={() => openSymbol(symbol)}
@@ -470,16 +544,16 @@ export function App() {
                     <SymbolRow
                       key={symbol.id}
                       symbol={symbol}
-                      query={query}
+                      query={deferredQuery}
                       active={position === active}
                       picked={selected?.id === symbol.id}
                       onOpen={() => openSymbol(symbol)}
                       onHover={() => setActive(position)}
                     />
                   ))}
-              {index && (query.trim() || route.systemSlug) && listed.length === 0 && (
+              {query === deferredQuery && index && (deferredQuery.trim() || route.systemSlug) && listed.length === 0 && (
                 <li className="px-3 py-4 text-mist">
-                  {query.trim() && concealed > 0 && scoped.some((symbol) => !symbolIsDescribed(symbol) && symbol.name.toLowerCase().includes(query.trim().toLowerCase()))
+                  {deferredQuery.trim() && concealed > 0 && scoped.some((symbol) => !symbolIsDescribed(symbol) && symbol.name.toLowerCase().includes(deferredQuery.trim().toLowerCase()))
                     ? "That call has no client description, so it stays hidden until you turn on Show unknown."
                     : "Nothing in this build matches that."}
                 </li>
@@ -497,14 +571,22 @@ export function App() {
               types={index?.types ?? {}}
               loading={systemLoading || Boolean(route.name && !index)}
               missing={missing}
-              requestedName={route.name}
+              systemError={systemError}
+              requestedName={route.name || route.systemSlug}
               onOpenType={openType}
               onOpenHelp={() => setHelpOpen(true)}
               surface={surface}
               outline={shown}
               onOpenSymbol={openSymbol}
-              onLeave={() => navigate({ versionId: version.id })}
-              onBackToApi={() => navigate({ versionId: version.id, systemSlug: surface?.primarySlug || route.systemSlug })}
+              onLeave={() => {
+                setPinned(false);
+                setQuery("");
+                navigate({ versionId: version.id });
+              }}
+              onBackToApi={() => {
+                setPinned(true);
+                navigate({ versionId: version.id, systemSlug: surface?.primarySlug || route.systemSlug });
+              }}
               compact={narrow}
               examples={examples}
             />
@@ -524,7 +606,7 @@ function surfaceFor(surfaces: SurfaceInfo[] | undefined, slug?: string) {
   return surfaces.find((item) => item.primarySlug === slug || item.members.some((member) => member.slug === slug)) ?? null;
 }
 
-function SurfaceGroup({
+const SurfaceGroup = memo(function SurfaceGroup({
   title,
   hint,
   surfaces,
@@ -539,6 +621,16 @@ function SurfaceGroup({
   onPick: (slug: string) => void;
   tone: string;
 }) {
+  const selectedRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    const node = selectedRef.current;
+    const list = node?.closest("ul");
+    if (!node || !list) return;
+    const nodeRect = node.getBoundingClientRect();
+    const listRect = list.getBoundingClientRect();
+    if (nodeRect.top < listRect.top) list.scrollTop -= listRect.top - nodeRect.top;
+    else if (nodeRect.bottom > listRect.bottom) list.scrollTop += nodeRect.bottom - listRect.bottom;
+  }, [current, surfaces]);
   if (!surfaces.length) return null;
   return (
     <>
@@ -549,28 +641,63 @@ function SurfaceGroup({
       {surfaces.map((item) => {
         const selected = item.primarySlug === current || item.members.some((member) => member.slug === current);
         return (
-          <li key={item.id}>
+          <li key={item.id} className="border-b border-line">
             <button
               type="button"
+              ref={selected ? selectedRef : undefined}
               onClick={() => onPick(item.primarySlug)}
-              className={`block w-full border-l-2 px-3 py-2 text-left ${navEdge(item, selected)}`}
+              className={`block w-full min-w-0 border-l-2 px-3 py-2.5 text-left ${navEdge(item, selected)}`}
             >
-              <span className="block text-parchment">{item.namespace || item.name}</span>
-              <span className="block truncate font-mono text-xs">
-                {item.namespace ? <span className="text-stone">{item.name} · </span> : null}
-                <CountBits functions={item.functions} events={item.events} tables={item.tables} />
-              </span>
+              <ApiRowText
+                name={item.name}
+                namespace={item.namespace}
+                functions={item.functions}
+                events={item.events}
+                tables={item.tables}
+              />
             </button>
           </li>
         );
       })}
     </>
   );
-}
+});
 
 function navEdge(item: { functions: number; events: number; tables: number }, selected: boolean) {
   const accent = item.functions + item.events === 0 ? kindAccent("table") : item.functions === 0 ? kindAccent("event") : kindAccent("function");
-  return selected ? `${accent.border} ${accent.wash}` : `${accent.edge} hover:bg-raised/70`;
+  return selected ? `${accent.border} ${accent.wash}` : "border-transparent hover:bg-raised/70";
+}
+
+function ApiRowText({
+  name,
+  namespace,
+  functions,
+  events,
+  tables,
+}: {
+  name: string;
+  namespace?: string;
+  functions: number;
+  events: number;
+  tables: number;
+}) {
+  const title = namespace || name;
+  const detail = namespace && namespace !== name ? name : null;
+  return (
+    <>
+      <span className="block truncate text-sm leading-5 text-parchment" title={title}>
+        {title}
+      </span>
+      {detail && (
+        <span className="block truncate text-xs leading-5 text-mist" title={detail}>
+          {detail}
+        </span>
+      )}
+      <span className="mt-0.5 block whitespace-nowrap font-mono text-xs leading-5">
+        <CountBits functions={functions} events={events} tables={tables} />
+      </span>
+    </>
+  );
 }
 
 function CountBits({ functions, events, tables }: { functions: number; events: number; tables: number }) {
@@ -610,13 +737,13 @@ function SymbolRow({
   const prose = symbolProse(symbol);
   const accent = kindAccent(symbol.kind);
   return (
-    <li>
+    <li className="border-b border-line">
       {unknownHeading && <p className="px-3 pt-3 pb-1 text-xs uppercase tracking-wider text-stone">Unknown</p>}
       <button
         type="button"
         onClick={onOpen}
         onMouseEnter={onHover}
-        className={`block w-full border-l-2 px-3 py-2 text-left ${accent.border} ${active || picked ? accent.wash : "hover:bg-raised/60"}`}
+        className={`block w-full border-l-2 px-3 py-2.5 text-left ${active || picked ? `${accent.border} ${accent.wash}` : "border-transparent hover:bg-raised/70"}`}
       >
         <span className="flex items-baseline justify-between gap-3">
           <Highlight text={symbol.kind === "event" ? symbol.qualified : symbol.name} query={query} tone={accent.text} />
@@ -726,7 +853,7 @@ function Help({ version, onClose }: { version: VersionInfo; onClose: () => void 
             line arguments.
           </li>
           <li>
-            Open the console and run <span className="font-mono text-parchment">ExportInterfaceFiles code</span>. The client writes{" "}
+            Open the console and run <code className="console">ExportInterfaceFiles code</code>. The client writes{" "}
             <span className="font-mono text-parchment">BlizzardInterfaceCode</span> next to the executable. Libram cannot run that command
             for you.
           </li>

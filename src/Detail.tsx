@@ -30,6 +30,7 @@ export function Detail({
   types,
   loading,
   missing,
+  systemError,
   requestedName,
   onOpenType,
   onOpenHelp,
@@ -48,6 +49,7 @@ export function Detail({
   types: Record<string, TypeRef[]>;
   loading: boolean;
   missing: boolean;
+  systemError?: string | null;
   requestedName?: string;
   onOpenType: (typeName: string) => void;
   onOpenHelp: () => void;
@@ -60,9 +62,28 @@ export function Detail({
   examples: Record<string, CallExample>;
 }) {
   if (!version) return null;
+  if (systemError) {
+    return (
+      <article className="mx-auto max-w-3xl px-8 py-10">
+        {compact && (
+          <button type="button" onClick={onBackToApi} className="mb-4 text-sm text-gold">
+            All APIs
+          </button>
+        )}
+        <p className="text-sm uppercase tracking-[0.16em] text-warn">Could not open this API</p>
+        <h2 className="mt-2 font-mono text-2xl text-parchment">{requestedName || "This API"}</h2>
+        <p className="mt-4 max-w-xl text-lg leading-relaxed text-mist">{systemError}</p>
+      </article>
+    );
+  }
   if (missing) {
     return (
       <article className="mx-auto max-w-3xl px-8 py-10">
+        {compact && (
+          <button type="button" onClick={onBackToApi} className="mb-4 text-sm text-gold">
+            All APIs
+          </button>
+        )}
         <p className="text-sm uppercase tracking-[0.16em] text-gold">Not in this build</p>
         <h2 className="mt-2 font-mono text-2xl text-parchment">{symbol?.qualified || requestedName || "This API"}</h2>
         <p className="mt-4 max-w-xl text-lg leading-relaxed text-mist">
@@ -113,7 +134,7 @@ function Welcome({ version, onOpenHelp }: { version: VersionInfo; onOpenHelp: ()
       <h2 className="text-4xl font-semibold tracking-tight text-parchment">WoW Forever client API</h2>
       <p className="mt-2 font-mono text-xl text-gold">{version.version}</p>
       <p className="mt-4 max-w-2xl text-lg leading-relaxed text-mist">
-        Libram reads the documentation tables the game writes with <code className="font-mono text-parchment">ExportInterfaceFiles code</code>.
+        Libram reads the documentation tables the game writes with <code className="console">ExportInterfaceFiles code</code>.
         The descriptions on these pages are quoted from the World of Warcraft client. Each ingest is kept, so you can switch builds when a patch
         moves a signature.
       </p>
@@ -133,7 +154,7 @@ function Welcome({ version, onOpenHelp }: { version: VersionInfo; onOpenHelp: ()
           <li>Launch that client with <code className="font-mono text-parchment">-console</code>.</li>
           <li>
             Open the console (<code className="font-mono text-parchment">~</code>, or <code className="font-mono text-parchment">^</code> on a
-            German keyboard) and run <code className="font-mono text-parchment">ExportInterfaceFiles code</code>.
+            German keyboard) and run <code className="console">ExportInterfaceFiles code</code>.
           </li>
           <li>
             Run <code className="font-mono text-parchment">npm run ingest</code>. Leave <code className="font-mono text-parchment">npm run watch</code>{" "}
@@ -408,7 +429,7 @@ function ExamplePanel({
   const stale = Boolean(example && recorded.join("\0") !== current.join("\0"));
   return (
     <details className="mt-6 rounded-md border border-line bg-panel px-4 py-3">
-      <summary className="cursor-pointer text-sm uppercase tracking-[0.14em] text-stone">Example</summary>
+      <summary className="cursor-pointer text-sm uppercase tracking-[0.14em] text-mist">Example</summary>
       <p className="mt-3 text-sm leading-relaxed text-stone">
         Kept in the examples folder. Ingesting a new client build does not replace it.
       </p>
