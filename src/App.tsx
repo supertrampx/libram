@@ -406,7 +406,7 @@ export function App() {
                 onChange={(event) => setSystemQuery(event.target.value)}
                 placeholder="APIs"
                 aria-label="Filter APIs"
-                className={`h-5 w-full bg-transparent p-0 leading-5 outline-none placeholder:text-stone ${systemQuery ? "text-sm tracking-normal text-parchment normal-case" : "text-xs tracking-wider text-stone uppercase"}`}
+                className={`h-5 w-full bg-transparent p-0 leading-5 outline-none placeholder:text-stone ${systemQuery ? "text-sm tracking-normal text-parchment" : "text-xs tracking-wider text-stone"}`}
               />
             </label>
             <label className="flex items-start gap-2 border-b border-line px-3 py-2 text-sm text-mist">
@@ -635,7 +635,7 @@ const SurfaceGroup = memo(function SurfaceGroup({
   return (
     <>
       <li className={`px-3 pt-3 pb-1 text-xs uppercase tracking-wider ${title === "Unknown" ? "text-stone" : kindTone(tone)}`}>
-        {title}
+        {title === "APIs" ? <>API<span className="normal-case">s</span></> : title}
         {hint && <span className="mt-1 block text-[0.7rem] font-sans normal-case tracking-normal text-stone">{hint}</span>}
       </li>
       {surfaces.map((item) => {
