@@ -108,8 +108,7 @@ export function libramGuide(siteBase) {
   }
 
   function publish(siteUrl) {
-    const pathname = new URL(siteUrl).pathname.replace(/\/$/, "");
-    const produced = pathname ? path.join(root, ".cache", "antora-site", pathname) : path.join(root, ".cache", "antora-site");
+    const produced = path.join(root, ".cache", "antora-site");
     if (!fs.existsSync(produced)) {
       throw new Error(`Antora did not write ${produced}`);
     }
@@ -150,7 +149,8 @@ export function libramGuide(siteBase) {
     }
     zipUi();
     const file = playbook(siteUrl);
-    console.log(`Building the Lua guide at ${new URL(siteUrl).pathname || "/"}guide/`);
+    const guidePath = `${new URL(siteUrl).pathname.replace(/\/$/, "")}/guide/`;
+    console.log(`Building the Lua guide at ${guidePath}`);
     pending = new Promise((resolve, reject) => {
       const child = spawn(bin, [file], { cwd: root, stdio: "inherit" });
       child.on("exit", (code) => {
