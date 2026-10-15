@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "luadurationobjectapi.GetElapsedPercent",
+  "lua": "-- The client says: Calculates the elapsed duration as a percentage value.\n-- Call this on a LuaDurationObjectAPI object.\nlocal elapsedPercent = object:GetElapsedPercent(modifier)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "modifier"
+  ],
+  "returns": [
+    "elapsedPercent"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "function",
+  "qualified": "C_SpellBook.FindSpellBookSlotForSpell",
+  "lua": "-- The client says: If found, returns the first slot position of a SpellBookItem matching the specified spell and criteria.\nlocal spellBookItemSlotIndex, spellBookItemSpellBank = C_SpellBook.FindSpellBookSlotForSpell(spellIdentifier, includeHidden, includeFlyouts, includeFutureSpells, includeOffSpec)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellIdentifier",
+    "includeHidden",
+    "includeFlyouts",
+    "includeFutureSpells",
+    "includeOffSpec"
+  ],
+  "returns": [
+    "spellBookItemSlotIndex",
+    "spellBookItemSpellBank"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

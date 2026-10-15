@@ -1,0 +1,18 @@
+{
+  "kind": "function",
+  "qualified": "C_Intl.FormatDateTime",
+  "lua": "-- The client says: Formats Unix time as localized date and time text using locale patterns, symbols, styles, and optional time zone.\nlocal result = C_Intl.FormatDateTime(unixTimeSeconds, dateStyle, timeStyle, timeZone)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "unixTimeSeconds",
+    "dateStyle",
+    "timeStyle",
+    "timeZone"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

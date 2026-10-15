@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_EventScheduler.GetEventZoneName",
+  "lua": "-- The client says: Will try to figure out a map zone name for an areaPOI.\nlocal name = C_EventScheduler.GetEventZoneName(areaPoiID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "areaPoiID"
+  ],
+  "returns": [
+    "name"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

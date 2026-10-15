@@ -1,0 +1,19 @@
+{
+  "kind": "function",
+  "qualified": "C_Club.GetInvitationCandidates",
+  "lua": "-- The client says: Returns a list of players that you can send a request to a Battle.net club. Returns an empty list for Character based clubs.\nlocal candidates = C_Club.GetInvitationCandidates(filter, maxResults, cursorPosition, allowFullMatch, clubId)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "filter",
+    "maxResults",
+    "cursorPosition",
+    "allowFullMatch",
+    "clubId"
+  ],
+  "returns": [
+    "candidates"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

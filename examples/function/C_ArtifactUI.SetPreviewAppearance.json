@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_ArtifactUI.SetPreviewAppearance",
+  "lua": "-- The client says: Call without an argument to clear the preview.\nC_ArtifactUI.SetPreviewAppearance(artifactAppearanceID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "artifactAppearanceID"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

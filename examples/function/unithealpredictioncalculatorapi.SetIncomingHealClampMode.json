@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "unithealpredictioncalculatorapi.SetIncomingHealClampMode",
+  "lua": "-- The client says: Changes the clamping mode used when calculating incoming heal amounts.\n-- Call this on an UnitHealPredictionCalculatorAPI object.\nobject:SetIncomingHealClampMode(incomingHealClampMode)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "incomingHealClampMode"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

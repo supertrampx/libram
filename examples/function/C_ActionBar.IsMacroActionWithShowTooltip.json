@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_ActionBar.IsMacroActionWithShowTooltip",
+  "lua": "-- The client says: Returns whether the given action button contains a macro with an explicit #showtooltip directive.\nif C_ActionBar.IsMacroActionWithShowTooltip(actionID) then\n  -- isMacroActionWithShowTooltip is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "actionID"
+  ],
+  "returns": [
+    "isMacroActionWithShowTooltip"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,1 @@
+{"name":"UIColor","slug":"uicolor","type":"System","functions":[{"name":"GetColors","returns":[{"name":"colors","type":"table","nilable":false,"innerType":"DBColorExport"}]}],"events":[],"tables":[],"namespace":"C_UIColor","environment":"All"}

@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_Spell.GetSpellCooldownDuration",
+  "lua": "-- The client says: Returns a duration object describing the active cooldown duration for a spell.\nlocal duration = C_Spell.GetSpellCooldownDuration(spellIdentifier, ignoreGCD)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellIdentifier",
+    "ignoreGCD"
+  ],
+  "returns": [
+    "duration"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

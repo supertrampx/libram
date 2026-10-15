@@ -1,0 +1,1 @@
+{"name":"ParentalControls","slug":"parentalcontrols","type":"System","functions":[{"name":"GetSecondsUntilParentalControlsKick","returns":[{"name":"remaining","type":"number","nilable":true}]}],"events":[],"tables":[],"environment":"All"}

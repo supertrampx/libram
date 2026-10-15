@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_EncounterTimeline.IsFeatureEnabled",
+  "lua": "-- The client says: Returns true if the encounter timeline feature has been enabled by the player. This function will always return false if the feature is not available.\nif C_EncounterTimeline.IsFeatureEnabled() then\n  -- isAvailableAndEnabled is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "isAvailableAndEnabled"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

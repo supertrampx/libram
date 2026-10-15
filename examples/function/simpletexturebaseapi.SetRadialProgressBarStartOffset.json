@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "simpletexturebaseapi.SetRadialProgressBarStartOffset",
+  "lua": "-- The client says: Sets the start angle offset of the radial progress bar as a normalized value (0 to 1), where 0 is at the bottom.\n-- Call this on a SimpleTextureBaseAPI object.\nobject:SetRadialProgressBarStartOffset(offset)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "offset"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Intl.ParseCurrency",
+  "lua": "-- The client says: Parses an entire localized currency string into a double amount and ISO 4217 currency code.\nlocal result = C_Intl.ParseCurrency(text)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "text"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

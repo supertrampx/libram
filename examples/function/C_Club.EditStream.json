@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "C_Club.EditStream",
+  "lua": "-- The client says: Check the canSetStreamName, canSetStreamSubject, canSetStreamAccess privileges. nil arguments will not change existing stream data.\nC_Club.EditStream(clubId, streamId, name, subject, leadersAndModeratorsOnly)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "clubId",
+    "streamId",
+    "name",
+    "subject",
+    "leadersAndModeratorsOnly"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

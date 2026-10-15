@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_EncounterEvents.GetEventColor",
+  "lua": "-- The client says: Returns any custom color override applied for an encounter event.\nlocal color = C_EncounterEvents.GetEventColor(encounterEventID, trigger)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "encounterEventID",
+    "trigger"
+  ],
+  "returns": [
+    "color"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

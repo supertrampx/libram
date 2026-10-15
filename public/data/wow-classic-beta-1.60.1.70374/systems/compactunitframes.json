@@ -1,0 +1,1 @@
+{"name":"CompactUnitFrames","slug":"compactunitframes","type":"System","functions":[],"events":[{"name":"CompactUnitFrameProfilesLoaded","literalName":"COMPACT_UNIT_FRAME_PROFILES_LOADED","synchronous":true}],"tables":[],"namespace":"C_CompactUnitFrames","environment":"All"}

@@ -1,0 +1,18 @@
+{
+  "kind": "function",
+  "qualified": "UnitPowerPercent",
+  "lua": "-- The client says: Queries the percent of power remaining, optionally evaluating it against a supplied curve.\n-- Call this on an Unit object.\nlocal result = object:UnitPowerPercent(unitToken, powerType, unmodified, curve)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "unitToken",
+    "powerType",
+    "unmodified",
+    "curve"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

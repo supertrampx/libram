@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingBlueprint.CanImportTypeFromCurrentLocation",
+  "lua": "-- The client says: Returns true if the player's current location is a valid place to attempt to import a specific kind of blueprint.\nif C_HousingBlueprint.CanImportTypeFromCurrentLocation(type) then\n  -- locationValid is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "type"
+  ],
+  "returns": [
+    "locationValid"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

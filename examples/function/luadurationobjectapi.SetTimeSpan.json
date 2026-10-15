@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "luadurationobjectapi.SetTimeSpan",
+  "lua": "-- The client says: Configures the duration object to represent a fixed start and end time span. If the end time is earlier than the start time, the duration will clamp to zero.\n-- Call this on a LuaDurationObjectAPI object.\nobject:SetTimeSpan(startTime, endTime)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "startTime",
+    "endTime"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

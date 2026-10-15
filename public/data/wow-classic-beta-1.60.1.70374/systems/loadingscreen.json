@@ -1,0 +1,1 @@
+{"name":"LoadingScreen","slug":"loadingscreen","type":"System","functions":[],"events":[{"name":"LoadingScreenDisabled","literalName":"LOADING_SCREEN_DISABLED","synchronous":true},{"name":"LoadingScreenEnabled","literalName":"LOADING_SCREEN_ENABLED","synchronous":true}],"tables":[],"namespace":"C_LoadingScreen","environment":"All"}

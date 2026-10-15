@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingBlueprint.DeleteBlueprint",
+  "lua": "-- The client says: Delete the specified owned blueprint; Listen for HousingBlueprintDeleteSuccess and HousingBlueprintDeleteFailure for results.\nC_HousingBlueprint.DeleteBlueprint(blueprintID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "blueprintID"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

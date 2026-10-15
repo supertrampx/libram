@@ -1,0 +1,19 @@
+{
+  "kind": "function",
+  "qualified": "C_ColorUtil.ConvertRGBToHSV",
+  "lua": "-- The client says: Converts an unpacked RGB color to HSV. For achromatic inputs, the returned hue will be -1.\nlocal hsvH, hsvS, hsvV = C_ColorUtil.ConvertRGBToHSV(rgbR, rgbG, rgbB)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "rgbR",
+    "rgbG",
+    "rgbB"
+  ],
+  "returns": [
+    "hsvH",
+    "hsvS",
+    "hsvV"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

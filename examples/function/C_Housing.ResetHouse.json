@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_Housing.ResetHouse",
+  "lua": "-- The client says: Resets all contents of the house, based on the provided scope; API restricted to ensure this can't be triggered without the player getting ample notice and confirmation.\nC_Housing.ResetHouse(resetScope)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "resetScope"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

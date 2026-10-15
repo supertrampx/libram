@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_ChatInfo.RegisterAddonMessagePrefix",
+  "lua": "-- The client says: Registers interest in addon messages with this prefix, cannot be an empty string.\nlocal result = C_ChatInfo.RegisterAddonMessagePrefix(prefix)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "prefix"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

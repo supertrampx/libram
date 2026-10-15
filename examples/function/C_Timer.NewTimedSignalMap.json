@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Timer.NewTimedSignalMap",
+  "lua": "-- The client says: Creates a new timed signal map that invokes the supplied callback with each key as it becomes due.\nlocal signalMap = C_Timer.NewTimedSignalMap(callback)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "callback"
+  ],
+  "returns": [
+    "signalMap"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

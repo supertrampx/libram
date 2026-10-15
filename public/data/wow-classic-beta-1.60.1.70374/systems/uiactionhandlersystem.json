@@ -1,0 +1,1 @@
+{"name":"UIActionHandlerSystem","slug":"uiactionhandlersystem","type":"System","functions":[],"events":[{"name":"HandleUIAction","payload":[{"name":"actionType","type":"UIActionType","nilable":false}],"literalName":"HANDLE_UI_ACTION","unique":true}],"tables":[],"namespace":"C_UIActionHandler","environment":"All"}

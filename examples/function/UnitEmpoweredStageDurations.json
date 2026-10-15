@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "UnitEmpoweredStageDurations",
+  "lua": "-- The client says: Returns a vector of duration objects that measure the time spans for each individual stage in an empowered channel, with hold-at-max time included as the last element.\n-- Call this on an Unit object.\nlocal duration = object:UnitEmpoweredStageDurations(unit)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "unit"
+  ],
+  "returns": [
+    "duration"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

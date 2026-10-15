@@ -1,0 +1,1 @@
+{"name":"TalentAndGlyphConstants","slug":"talentandglyphconstants","type":"Definitions","functions":[],"events":[],"tables":[{"name":"TalentTierConstants","kind":"Constants","fields":[{"name":"MAX_TALENT_TIERS","type":"number","value":7}]}]}

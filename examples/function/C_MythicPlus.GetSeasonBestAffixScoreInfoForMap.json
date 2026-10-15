@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_MythicPlus.GetSeasonBestAffixScoreInfoForMap",
+  "lua": "-- The client says: Gets the active players best runs by the seasonal tracked affixes as well as their overall score for the current season.\nlocal affixScores, bestOverAllScore = C_MythicPlus.GetSeasonBestAffixScoreInfoForMap(mapChallengeModeID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "mapChallengeModeID"
+  ],
+  "returns": [
+    "affixScores",
+    "bestOverAllScore"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

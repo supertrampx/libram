@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_QuestLog.GetMaxNumQuests",
+  "lua": "-- The client says: This is the maximum number of quests a player can be on, including hidden quests, world quests, emissaries etc.\nlocal maxNumQuests = C_QuestLog.GetMaxNumQuests()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "maxNumQuests"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

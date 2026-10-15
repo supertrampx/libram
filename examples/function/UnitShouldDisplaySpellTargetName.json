@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "UnitShouldDisplaySpellTargetName",
+  "lua": "-- The client says: If the unit is currently casting a spell, returns whether the target's name should be displayed. Returns false if the unit is not casting a spell or the spell has no target.\n-- Call this on an Unit object.\nif object:UnitShouldDisplaySpellTargetName(unit) then\n  -- result is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "unit"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,1 @@
+{"name":"CatalogShopConstants","slug":"catalogshopconstants","type":"Definitions","functions":[],"events":[],"tables":[{"name":"CatalogShopVirtualCurrencyConstants","kind":"Constants","fields":[{"name":"HEARTHSTEEL_VC_CURRENCY_CODE","type":"cstring","value":"XVV"},{"name":"TRADERS_TENDER_VC_CURRENCY_CODE","type":"cstring","value":"XWP"}]}]}

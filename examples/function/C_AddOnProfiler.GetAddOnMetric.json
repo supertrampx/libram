@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_AddOnProfiler.GetAddOnMetric",
+  "lua": "-- The client says: Gets an AddOn profiler value - all times returned are in milliseconds.\nlocal result = C_AddOnProfiler.GetAddOnMetric(name, metric)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "name",
+    "metric"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

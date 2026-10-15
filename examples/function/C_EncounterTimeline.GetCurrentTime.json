@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_EncounterTimeline.GetCurrentTime",
+  "lua": "-- The client says: Returns the current timestamp used for rendering the timeline display.\nlocal currentTime = C_EncounterTimeline.GetCurrentTime()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "currentTime"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

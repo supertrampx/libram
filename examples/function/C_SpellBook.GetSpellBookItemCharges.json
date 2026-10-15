@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_SpellBook.GetSpellBookItemCharges",
+  "lua": "-- The client says: Returns a table of info about the charges of a charge-accumulating SpellBookItem; May return nil if item is not found or is not charge-based.\nlocal chargeInfo = C_SpellBook.GetSpellBookItemCharges(spellBookItemSlotIndex, spellBookItemSpellBank)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellBookItemSlotIndex",
+    "spellBookItemSpellBank"
+  ],
+  "returns": [
+    "chargeInfo"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

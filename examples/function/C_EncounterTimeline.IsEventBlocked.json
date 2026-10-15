@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_EncounterTimeline.IsEventBlocked",
+  "lua": "-- The client says: Returns true if the event is in a 'blocked' state, where the cast for this event may not occur due to encounter conditions not being met.\nif C_EncounterTimeline.IsEventBlocked(eventID) then\n  -- blocked is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "eventID"
+  ],
+  "returns": [
+    "blocked"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

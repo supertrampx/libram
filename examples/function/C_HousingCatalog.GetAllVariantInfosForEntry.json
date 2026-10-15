@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingCatalog.GetAllVariantInfosForEntry",
+  "lua": "-- The client says: Returns variant info for all variants of a given catalog entry; Variants represent different visual modifications of the same base entry (ex: dyed versions).\nlocal variantInfos = C_HousingCatalog.GetAllVariantInfosForEntry(entryID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "entryID"
+  ],
+  "returns": [
+    "variantInfos"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

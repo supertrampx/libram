@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "C_StringUtil.WrapString",
+  "lua": "-- The client says: Returns a string with 'prefix' and 'suffix' joined to 'infix' iif 'infix' is not an empty string. Else, an empty string is returned.\nlocal text = C_StringUtil.WrapString(infix, prefix, suffix)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "infix",
+    "prefix",
+    "suffix"
+  ],
+  "returns": [
+    "text"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

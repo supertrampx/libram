@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "C_UnitAuras.GetAuraDispelTypeColor",
+  "lua": "-- The client says: Queries the dispel type associated with an aura instance and remaps it to a color via a curve, with the dispel type ID used as the 'x' value.\nlocal dispelTypeColor = C_UnitAuras.GetAuraDispelTypeColor(auraInstanceUnit, auraInstanceID, curve)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "auraInstanceUnit",
+    "auraInstanceID",
+    "curve"
+  ],
+  "returns": [
+    "dispelTypeColor"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

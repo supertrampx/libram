@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "housingcatalogsearcherapi.SetAllInFilterTagGroup",
+  "lua": "-- The client says: Set the toggle state of all filter tags within a specific group; If active, only entries that match Any of the tags in the group will be included in search results.\n-- Call this on a HousingCatalogSearcherAPI object.\nobject:SetAllInFilterTagGroup(groupID, active)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "groupID",
+    "active"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Club.GetInvitationsForClub",
+  "lua": "-- The client says: Get the pending invitations for this club. Call RequestInvitationsForClub() to retrieve invitations from server.\nlocal invitations = C_Club.GetInvitationsForClub(clubId)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "clubId"
+  ],
+  "returns": [
+    "invitations"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

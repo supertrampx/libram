@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Spell.GetSpellName",
+  "lua": "-- The client says: Returns nil if spell is not found.\nlocal name = C_Spell.GetSpellName(spellIdentifier)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellIdentifier"
+  ],
+  "returns": [
+    "name"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

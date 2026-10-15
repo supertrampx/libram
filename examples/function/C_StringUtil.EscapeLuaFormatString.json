@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_StringUtil.EscapeLuaFormatString",
+  "lua": "-- The client says: Returns a string with Lua format string tokens ('%') escaped.\nlocal escapedText = C_StringUtil.EscapeLuaFormatString(text)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "text"
+  ],
+  "returns": [
+    "escapedText"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

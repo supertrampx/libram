@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingCustomizeMode.ApplyDyeToSelectedDecor",
+  "lua": "-- The client says: If a dyeable decor is selected, applies a specific dye color in a specific slot as a preview; See CommitDyesForSelectedDecor to actually save applied dye changes.\nC_HousingCustomizeMode.ApplyDyeToSelectedDecor(dyeSlotID, dyeColorID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "dyeSlotID",
+    "dyeColorID"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

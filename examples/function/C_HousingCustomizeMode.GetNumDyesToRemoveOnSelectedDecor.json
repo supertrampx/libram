@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingCustomizeMode.GetNumDyesToRemoveOnSelectedDecor",
+  "lua": "-- The client says: If a dyeable decor instance is selected, returns how many dye slots would be cleared on applying all currently previewed dye changes.\nlocal numDyesToRemove = C_HousingCustomizeMode.GetNumDyesToRemoveOnSelectedDecor()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "numDyesToRemove"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

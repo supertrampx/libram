@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Spell.IsSelfBuff",
+  "lua": "-- The client says: Returns true if an aura only applies effects to the player, and no other units.\nif C_Spell.IsSelfBuff(spellID) then\n  -- hasSelfEffectsOnly is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellID"
+  ],
+  "returns": [
+    "hasSelfEffectsOnly"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

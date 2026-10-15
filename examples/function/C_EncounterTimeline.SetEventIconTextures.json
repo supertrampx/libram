@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_EncounterTimeline.SetEventIconTextures",
+  "lua": "-- The client says: Updates a given vector of texture objects to reference art assets for icons associated with an event.\nC_EncounterTimeline.SetEventIconTextures(eventID, includeIcons, textures)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "eventID",
+    "includeIcons",
+    "textures"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

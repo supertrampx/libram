@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_PaperDollInfo.CancelTemporaryEnchantment",
+  "lua": "-- The client says: Cancels active temporary enchantments on inventory slot items.\nC_PaperDollInfo.CancelTemporaryEnchantment(slot)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "slot"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

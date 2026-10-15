@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "durationtextbindingobjectapi.SetTextColorCurve",
+  "lua": "-- The client says: Configures this duration text binding to adjust fontstring text color by evaluating a duration property through a curve.\n-- Call this on a DurationTextBindingObjectAPI object.\nobject:SetTextColorCurve(curve, property)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "curve",
+    "property"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

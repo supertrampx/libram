@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_DamageMeter.GetSessionDurationSeconds",
+  "lua": "-- The client says: Returns the amount of time a combat session has lasted.\nlocal durationSeconds = C_DamageMeter.GetSessionDurationSeconds(sessionType)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "sessionType"
+  ],
+  "returns": [
+    "durationSeconds"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

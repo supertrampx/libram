@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "mapvalues",
+  "lua": "-- The client says: Applies a given function over all supplied values individually, replacing the value with the result of the call.\n-- Call this on a FrameScript object.\nlocal mapped = object:mapvalues(func, values)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "func",
+    "values"
+  ],
+  "returns": [
+    "mapped"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

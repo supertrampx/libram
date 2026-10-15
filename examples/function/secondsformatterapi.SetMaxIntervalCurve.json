@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "secondsformatterapi.SetMaxIntervalCurve",
+  "lua": "-- The client says: Sets the maximum interval band used for formatting to a curve that will be evaluated with seconds values to produce a value matching a SecondsFormatterInterval enum member.\n-- Call this on a SecondsFormatterAPI object.\nobject:SetMaxIntervalCurve(curve)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "curve"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

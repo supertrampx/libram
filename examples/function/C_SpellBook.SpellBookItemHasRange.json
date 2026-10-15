@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_SpellBook.SpellBookItemHasRange",
+  "lua": "-- The client says: Returns true if the SpellBookIem has a min and/or max range greater than 0; Will always return false if it is not a spell.\nif C_SpellBook.SpellBookItemHasRange(spellBookItemSlotIndex, spellBookItemSpellBank) then\n  -- hasRange is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellBookItemSlotIndex",
+    "spellBookItemSpellBank"
+  ],
+  "returns": [
+    "hasRange"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

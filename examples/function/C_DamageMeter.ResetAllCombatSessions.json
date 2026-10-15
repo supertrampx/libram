@@ -1,0 +1,11 @@
+{
+  "kind": "function",
+  "qualified": "C_DamageMeter.ResetAllCombatSessions",
+  "lua": "-- The client says: Clears the data for all the player's combat sessions.\nC_DamageMeter.ResetAllCombatSessions()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

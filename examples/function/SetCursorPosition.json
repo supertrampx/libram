@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "SetCursorPosition",
+  "lua": "-- The client says: Insecure code can only call this once in response to gamepad input hardware events.\n-- Call this on an Input object.\nobject:SetCursorPosition(xPosition, yPosition)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "xPosition",
+    "yPosition"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

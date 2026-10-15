@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Spell.GetSpellCastCount",
+  "lua": "-- The client says: Returns number of times a spell can be cast, typically based on availability of things like required reagent items; Returns 0 if spell is not found.\nlocal castCount = C_Spell.GetSpellCastCount(spellIdentifier)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellIdentifier"
+  ],
+  "returns": [
+    "castCount"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

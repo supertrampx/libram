@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingCatalog.GetDecorMaxOwnedCount",
+  "lua": "-- The client says: Returns the maximum total number of decor that can be in storage/in the house chest; Note that not all decor entries in storage count towards this limit (see GetDecorTotalOwnedCount).\nlocal maxOwnedCount = C_HousingCatalog.GetDecorMaxOwnedCount()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "maxOwnedCount"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

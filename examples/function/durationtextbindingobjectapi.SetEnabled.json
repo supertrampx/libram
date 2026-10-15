@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "durationtextbindingobjectapi.SetEnabled",
+  "lua": "-- The client says: Configures whether this duration text binding updates its font string automatically.\n-- Call this on a DurationTextBindingObjectAPI object.\nobject:SetEnabled(enabled)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "enabled"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

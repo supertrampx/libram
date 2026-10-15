@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_UnitAuras.GetUnitAuraBySpellID",
+  "lua": "-- The client says: Returns the first instance of an aura on a unit matching a given spell ID. Returns nil if no such aura is found. Additionally can return nil if querying a unit that is not visible (eg. party members on other maps).\nlocal aura = C_UnitAuras.GetUnitAuraBySpellID(unit, spellID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "unit",
+    "spellID"
+  ],
+  "returns": [
+    "aura"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

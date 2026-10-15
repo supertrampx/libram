@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Map.GetBestMapForUnit",
+  "lua": "-- The client says: Only works for the player and party members.\nlocal uiMapID = C_Map.GetBestMapForUnit(unitToken)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "unitToken"
+  ],
+  "returns": [
+    "uiMapID"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

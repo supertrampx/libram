@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingBlueprint.StartImportRoomBlueprint",
+  "lua": "-- The client says: Start the process of importing a Room Blueprint. This will lead to Layout Mode being opened, so the player can then select an available door to attach the room to.\nC_HousingBlueprint.StartImportRoomBlueprint(shareCode)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "shareCode"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

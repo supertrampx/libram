@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "C_ReportSystem.SendReport",
+  "lua": "-- The client says: Not allowed to be called by addons.\nC_ReportSystem.SendReport(reportInfo, playerLocation)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "reportInfo",
+    "playerLocation"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

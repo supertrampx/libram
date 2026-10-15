@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "C_UnitAuras.GetAuraBaseDuration",
+  "lua": "-- The client says: Returns the base duration of the given spell (or aura). Takes an optional spellID to use as the new duration if that cannot be derived from the aura, if that value isn't supplied the aura's spellID will be used.\nlocal newDuration = C_UnitAuras.GetAuraBaseDuration(auraInstanceUnit, auraInstanceID, spellID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "auraInstanceUnit",
+    "auraInstanceID",
+    "spellID"
+  ],
+  "returns": [
+    "newDuration"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

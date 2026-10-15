@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_DelvesUI.GetDelvesMinRequiredLevel",
+  "lua": "-- The client says: Players must be at or above the min level + offset to enter Delves. This function returns that min level.\nlocal minRequiredLevel = C_DelvesUI.GetDelvesMinRequiredLevel()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "minRequiredLevel"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

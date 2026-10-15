@@ -1,0 +1,1 @@
+{"name":"LossOfControlConstants","slug":"lossofcontrolconstants","type":"Definitions","functions":[],"events":[],"tables":[{"name":"LossOfControlConsts","kind":"Constants","fields":[{"name":"LOSS_OF_CONTROL_ACTIVE_INDEX","type":"number","value":1}]}]}

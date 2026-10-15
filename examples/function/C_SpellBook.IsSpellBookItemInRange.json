@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "C_SpellBook.IsSpellBookItemInRange",
+  "lua": "-- The client says: Returns true if the current target is within range of the SpellBookIem; False if out of range; Nil if range check was invalid.\nif C_SpellBook.IsSpellBookItemInRange(spellBookItemSlotIndex, spellBookItemSpellBank, targetUnit) then\n  -- inRange is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellBookItemSlotIndex",
+    "spellBookItemSpellBank",
+    "targetUnit"
+  ],
+  "returns": [
+    "inRange"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

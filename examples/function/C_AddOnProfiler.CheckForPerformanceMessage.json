@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_AddOnProfiler.CheckForPerformanceMessage",
+  "lua": "-- The client says: Optimized check for determining if AddOns are severely impacting UI performance.\nlocal msg = C_AddOnProfiler.CheckForPerformanceMessage()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "msg"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

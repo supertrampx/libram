@@ -1,0 +1,13 @@
+{
+  "kind": "event",
+  "qualified": "ENCOUNTER_TIMELINE_VIEW_ACTIVATED",
+  "lua": "-- The client says: Fired when a new timeline view is being activated. This is fired after a full layout and timeline data update, allowing the UI to immediately query the API and get usable results.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"ENCOUNTER_TIMELINE_VIEW_ACTIVATED\")\nframe:SetScript(\"OnEvent\", function(self, event, viewType)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "viewType"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "event",
+  "qualified": "UNIT_ARENA_COOLDOWNS_UPDATE",
+  "lua": "-- The client says: Only signaled when the active player is a commentator or spectator.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"UNIT_ARENA_COOLDOWNS_UPDATE\")\nframe:SetScript(\"OnEvent\", function(self, event, unitTarget)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "unitTarget"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

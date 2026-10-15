@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_PlayerInfo.GetPlayerMythicPlusRatingSummary",
+  "lua": "-- The client says: Returns the players mythic+ rating summary which includes the runs they've completed as well as their current season m+ rating.\nlocal ratingSummary = C_PlayerInfo.GetPlayerMythicPlusRatingSummary(playerToken)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "playerToken"
+  ],
+  "returns": [
+    "ratingSummary"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

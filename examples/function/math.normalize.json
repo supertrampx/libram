@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "math.normalize",
+  "lua": "-- The client says: Returns the relative position of a value within a range, where the minimum maps to 0 and the maximum maps to 1.\nlocal normalizedValue = math.normalize(value, minimum, maximum)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "value",
+    "minimum",
+    "maximum"
+  ],
+  "returns": [
+    "normalizedValue"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

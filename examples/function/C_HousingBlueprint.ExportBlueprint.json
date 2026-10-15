@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingBlueprint.ExportBlueprint",
+  "lua": "-- The client says: Saves out a new Blueprint of the specified type, using the specified name, if available, based on where the player is currently standing (see GetExportAvailability); Listen for HousingBlueprintExportSuccess and HousingBlueprintExportFailure for results.\nC_HousingBlueprint.ExportBlueprint(type, name)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "type",
+    "name"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

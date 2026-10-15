@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "simplefontapi.SetFontHeight",
+  "lua": "-- The client says: Preserves all flags, does correct height conversion due to fixedHeight.\n-- Call this on a SimpleFontAPI object.\nobject:SetFontHeight(height)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "height"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "simpleframescriptobjectapi.AddAccessRestrictions",
+  "lua": "-- The client says: Adds access restrictions to a script object, preventing it from being used in API calls when enforced.\n-- Call this on a SimpleFrameScriptObjectAPI object.\nobject:AddAccessRestrictions(restrictions)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "restrictions"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

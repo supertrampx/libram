@@ -1,0 +1,18 @@
+{
+  "kind": "function",
+  "qualified": "C_Commentator.SendAddonMessageLogged",
+  "lua": "-- The client says: Works the same as C_ChatInfo.SendAddonMessageLogged but accepts secrets and is only allowed when outgoing addon comms are allowed (i.e. on tournament realms).\nlocal result = C_Commentator.SendAddonMessageLogged(prefix, message, chatType, target)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "prefix",
+    "message",
+    "chatType",
+    "target"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_ChallengeMode.GetOverallDungeonScore",
+  "lua": "-- The client says: Gets the overall season mythic+ rating for the player.\nlocal overallDungeonScore = C_ChallengeMode.GetOverallDungeonScore()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "overallDungeonScore"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,1 @@
+{"name":"LootFrame","slug":"lootframe","type":"System","functions":[{"name":"TryAutoLoot"}],"events":[],"tables":[],"namespace":"C_LootFrame","environment":"All"}

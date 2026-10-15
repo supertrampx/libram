@@ -1,0 +1,1 @@
+{"name":"PVPMgrConstants","slug":"pvpmgrconstants","type":"Definitions","functions":[],"events":[],"tables":[{"name":"PvPMatchmakingType","kind":"Enumeration","fields":[{"name":"Battleground","type":"PvPMatchmakingType","enumValue":0},{"name":"Arena","type":"PvPMatchmakingType","enumValue":1}],"numValues":2,"minValue":0,"maxValue":1}]}

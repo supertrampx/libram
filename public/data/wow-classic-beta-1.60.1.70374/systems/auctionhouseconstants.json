@@ -1,0 +1,1 @@
+{"name":"AuctionHouseConstants","slug":"auctionhouseconstants","type":"Definitions","functions":[],"events":[],"tables":[{"name":"AuctionConstants","kind":"Constants","fields":[{"name":"DEFAULT_AUCTION_PRICE_MULTIPLIER","type":"number","value":1.5}]}]}

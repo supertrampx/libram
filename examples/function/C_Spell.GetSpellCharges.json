@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Spell.GetSpellCharges",
+  "lua": "-- The client says: Returns a table of info about the charges of a charge-accumulating spell; May return nil if spell is not found or is not charge-based.\nlocal chargeInfo = C_Spell.GetSpellCharges(spellIdentifier)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellIdentifier"
+  ],
+  "returns": [
+    "chargeInfo"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

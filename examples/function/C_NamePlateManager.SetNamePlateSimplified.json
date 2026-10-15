@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "C_NamePlateManager.SetNamePlateSimplified",
+  "lua": "-- The client says: Set whether the nameplate attached to a unit is considered simplified, which can change the way it's displayed.\nC_NamePlateManager.SetNamePlateSimplified(unitToken, isSimplified)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "unitToken",
+    "isSimplified"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

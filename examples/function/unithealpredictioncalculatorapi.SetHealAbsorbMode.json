@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "unithealpredictioncalculatorapi.SetHealAbsorbMode",
+  "lua": "-- The client says: Changes the processing mode used when calculating both heal absorb and incoming heal amounts.\n-- Call this on an UnitHealPredictionCalculatorAPI object.\nobject:SetHealAbsorbMode(healAbsorbMode)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "healAbsorbMode"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

@@ -1,0 +1,1 @@
+{"name":"CombatLogInternal","slug":"combatloginternal","type":"System","functions":[{"name":"GetCurrentEventInfo","returns":[]}],"events":[{"name":"CombatLogEventInternalUnfiltered","literalName":"COMBAT_LOG_EVENT_INTERNAL_UNFILTERED","synchronous":true,"callback":true}],"tables":[],"namespace":"C_CombatLogInternal","environment":"All"}

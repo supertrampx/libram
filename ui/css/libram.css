@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+
+html {
+  scrollbar-color: #3d4233 #13150f;
+}
+
+body {
+  background: #13150f;
+  color: #ebe6d4;
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+code,
+kbd,
+pre,
+.doc .listingblock code {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+a {
+  color: #e2b45a;
+}
+
+.navbar {
+  background: #1b1e16;
+  border-bottom: 1px solid #34392c;
+  color: #ebe6d4;
+}
+
+.navbar-brand .navbar-item,
+.navbar-end .navbar-item,
+.navbar-end .navbar-link,
+.navbar-brand .navbar-item:first-child a {
+  color: #b2ac96;
+}
+
+.navbar-brand .navbar-item:first-child,
+a.navbar-item:hover,
+.navbar-end > a.navbar-item:hover,
+.navbar-end .navbar-link:hover {
+  color: #ebe6d4;
+  background: transparent;
+}
+
+.navbar-burger span {
+  background-color: #ebe6d4;
+}
+
+#search-input {
+  background: #24281d;
+  border: 1px solid #34392c;
+  color: #ebe6d4;
+}
+
+#search-input:disabled {
+  background: #1b1e16;
+  color: #7d7866;
+}
+
+@media screen and (max-width: 1023.5px) {
+  .navbar-menu {
+    background: #1b1e16;
+    box-shadow: none;
+    border-bottom: 1px solid #34392c;
+  }
+
+  .navbar-menu a.navbar-item:hover {
+    background: #24281d;
+  }
+}
+
+.nav,
+.nav-panel-explore,
+.nav-panel-explore .components {
+  background: #1b1e16;
+  color: #b2ac96;
+}
+
+.nav {
+  box-shadow: none;
+  border-right: 1px solid #34392c;
+}
+
+.nav-menu h3.title,
+.nav-menu h3.title a {
+  color: #ebe6d4;
+}
+
+.nav a {
+  color: #b2ac96;
+}
+
+.is-current-page > .nav-link,
+.is-current-page > .nav-text,
+.nav a.is-current-page {
+  color: #e2b45a;
+}
+
+.nav-panel-explore .context {
+  color: #7d7866;
+  box-shadow: 0 -1px 0 #34392c;
+}
+
+.nav-panel-explore .component .version a {
+  background: #24281d;
+  color: #b2ac96;
+}
+
+.nav-panel-explore .component .is-current a {
+  background: #e2b45a;
+  color: #13150f;
+}
+
+.toolbar {
+  background: #13150f;
+  color: #b2ac96;
+}
+
+.breadcrumbs {
+  color: #7d7866;
+}
+
+.doc {
+  color: #ebe6d4;
+}
+
+.doc h1,
+.doc h2,
+.doc h3,
+.doc h4,
+.doc h5,
+.doc h6,
+.doc .page {
+  color: #ebe6d4;
+}
+
+.doc a {
+  color: #e2b45a;
+}
+
+.doc p code,
+.doc li code,
+.doc td code,
+.doc h1 code,
+.doc h2 code,
+.doc h3 code {
+  background: #24281d;
+  color: #ebe6d4;
+  border-radius: 0.25rem;
+  padding: 0.05em 0.35em;
+}
+
+.doc pre,
+.doc .listingblock pre,
+.doc .literalblock pre {
+  background: #13150f;
+  border: 1px solid #34392c;
+  border-radius: 0.4rem;
+  color: #ebe6d4;
+}
+
+.doc table,
+.doc table.tableblock {
+  border-color: #34392c;
+}
+
+.doc th,
+.doc td,
+.doc table.tableblock th,
+.doc table.tableblock td {
+  border-color: #34392c;
+  color: #ebe6d4;
+}
+
+.doc thead,
+.doc table.tableblock thead th {
+  background: #1b1e16;
+}
+
+aside.toc .toc-menu,
+.toc-menu a {
+  color: #b2ac96;
+}
+
+.toc .toc-menu h3,
+aside.toc .toc-menu a.is-active {
+  color: #e2b45a;
+}
+
+.page-versions .version-menu-toggle {
+  background: #24281d;
+  border: 1px solid #34392c;
+  color: #ebe6d4;
+}
+
+.page-versions .version-menu {
+  background: #1b1e16;
+  border: 1px solid #34392c;
+}
+
+.page-versions .version {
+  color: #b2ac96;
+}
+
+.page-versions .version.is-current {
+  color: #e2b45a;
+}
+
+nav.pagination {
+  border-top-color: #34392c;
+}
+
+footer.footer {
+  background: #1b1e16;
+  border-top: 1px solid #34392c;
+  color: #7d7866;
+}
+
+footer.footer a {
+  color: #e2b45a;
+}
+
+.hljs,
+.doc pre.highlight code {
+  background: #13150f;
+  color: #ebe6d4;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #7d7866;
+  font-style: normal;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-section {
+  color: #e0b0d8;
+  font-weight: 400;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #e2b45a;
+}
+
+.hljs-string,
+.hljs-doctag,
+.hljs-regexp {
+  color: #8fc9a3;
+}
+
+.hljs-title,
+.hljs-function,
+.hljs-name,
+.hljs-attr,
+.hljs-attribute,
+.hljs-variable,
+.hljs-template-variable {
+  color: #9ec0e6;
+  font-weight: 400;
+}
+
+.hljs-meta,
+.hljs-symbol,
+.hljs-bullet {
+  color: #b2ac96;
+}
+
+.search-result-dropdown-menu,
+.search-result-dataset {
+  background: #1b1e16;
+  border-color: #34392c;
+  color: #ebe6d4;
+}
+
+.search-result-document-title,
+.search-result-component-header {
+  color: #e2b45a;
+}
+
+.search-result-document-hit > a {
+  color: #ebe6d4;
+}
+
+.search-result-document-hit > a:hover {
+  background: #24281d;
+}
+
+.search-result-highlight {
+  color: #e2b45a;
+  background: transparent;
+}

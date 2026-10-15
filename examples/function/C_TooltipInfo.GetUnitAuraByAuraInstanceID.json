@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "C_TooltipInfo.GetUnitAuraByAuraInstanceID",
+  "lua": "-- The client says: Obtains aura info like other functions with the caveat that the filters will always at least include the typically mutually exclusive HELPFUL|HARMFUL regardless of what the argument value is set to.\nlocal data = C_TooltipInfo.GetUnitAuraByAuraInstanceID(unitToken, auraInstanceID, filter)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "unitToken",
+    "auraInstanceID",
+    "filter"
+  ],
+  "returns": [
+    "data"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

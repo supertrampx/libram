@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_SpellBook.IsSpellKnown",
+  "lua": "-- The client says: Returns true if a player knows a spell. This function can also return true for spells that aren't in the spellbook, such as temporarily-granted abilities.\nif C_SpellBook.IsSpellKnown(spellID, spellBank) then\n  -- isKnown is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellID",
+    "spellBank"
+  ],
+  "returns": [
+    "isKnown"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

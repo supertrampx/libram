@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_EventScheduler.HasSavedReminders",
+  "lua": "-- The client says: Returns whether there are any event reminders saved. Can include reminders that have expired since set and haven't gotten removed yet. Has to be called after cvars are loaded.\nif C_EventScheduler.HasSavedReminders() then\n  -- hasSavedReminders is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "hasSavedReminders"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

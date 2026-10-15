@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingDecor.GetNumDecorPlaced",
+  "lua": "-- The client says: Returns the number of individual decor objects placed in the current house or plot; This is NOT the value used in placement budget calculations, see GetSpentPlacementBudget for that.\nlocal numPlaced = C_HousingDecor.GetNumDecorPlaced()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "numPlaced"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

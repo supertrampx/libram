@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "simpletexturebaseapi.SetRadialProgressBarFeather",
+  "lua": "-- The client says: Sets the feather/blur amount applied to the radial progress bar edge (higher = more gradual falloff).\n-- Call this on a SimpleTextureBaseAPI object.\nobject:SetRadialProgressBarFeather(feather)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "feather"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

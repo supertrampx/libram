@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "luadurationobjectapi.GetModRate",
+  "lua": "-- The client says: Returns the divisor used to convert a duration from real time to base time.\n-- Call this on a LuaDurationObjectAPI object.\nlocal modRate = object:GetModRate()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "modRate"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

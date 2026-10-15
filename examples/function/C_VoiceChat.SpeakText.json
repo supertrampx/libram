@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "C_VoiceChat.SpeakText",
+  "lua": "-- The client says: SpeakText also supports XML TTS tags on Windows including bookmarks - see SAPI XML TTS Tutorial in Microsoft's online documentation for more information.\nC_VoiceChat.SpeakText(voiceID, text, rate, volume, overlap)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "voiceID",
+    "text",
+    "rate",
+    "volume",
+    "overlap"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

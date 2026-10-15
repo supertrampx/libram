@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "secondsformatterapi.SetCanRoundUpIntervals",
+  "lua": "-- The client says: Configures the formatter to promote intervals if values are large enough (eg. '60m' -> '1h').\n-- Call this on a SecondsFormatterAPI object.\nobject:SetCanRoundUpIntervals(canRound)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "canRound"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

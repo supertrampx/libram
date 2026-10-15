@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingExpertMode.SetPrecisionIncrementingActive",
+  "lua": "-- The client says: Sets a specific type of incremental change active or inactive; Whilever that type is active and target stays selected, incremental changes of that type will continue to be made every frame.\nC_HousingExpertMode.SetPrecisionIncrementingActive(incrementType, active)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "incrementType",
+    "active"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

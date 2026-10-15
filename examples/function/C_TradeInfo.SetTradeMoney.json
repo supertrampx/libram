@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_TradeInfo.SetTradeMoney",
+  "lua": "-- The client says: Sets the amount of money in the current trade offer.\nC_TradeInfo.SetTradeMoney(amount)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "amount"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

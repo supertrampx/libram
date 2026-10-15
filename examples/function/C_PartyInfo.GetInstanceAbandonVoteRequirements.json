@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "C_PartyInfo.GetInstanceAbandonVoteRequirements",
+  "lua": "-- The client says: Returns values controlling the vote.\nlocal votesRequired, keystoneOwnerVoteWeight = C_PartyInfo.GetInstanceAbandonVoteRequirements()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "votesRequired",
+    "keystoneOwnerVoteWeight"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

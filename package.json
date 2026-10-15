@@ -1,0 +1,35 @@
+{
+  "name": "libram",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "test": "node scripts/selftest.mjs",
+    "status": "node tools/libram.mjs status",
+    "ingest": "node tools/libram.mjs ingest",
+    "watch": "node tools/libram.mjs watch",
+    "changes": "node tools/libram.mjs changes",
+    "examples": "node tools/libram.mjs examples",
+    "docs:import-lua": "node scripts/import-lua-manual.mjs"
+  },
+  "dependencies": {
+    "fuse.js": "^7.1.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@antora/cli": "^3.2.1",
+    "@antora/lunr-extension": "^1.0.0-alpha.13",
+    "@antora/site-generator": "^3.2.1",
+    "@tailwindcss/vite": "^4.1.13",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5"
+  }
+}

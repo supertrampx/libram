@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "frameapimodelsceneframeactorbase.SetPreferModelCollisionBounds",
+  "lua": "-- The client says: If true, will try to use the collision bounds of models for sizing and centering. Will fall back to default model bounds if set to False, or if collision bounds are unavailable.\n-- Call this on a FrameAPIModelSceneFrameActorBase object.\nobject:SetPreferModelCollisionBounds(preferCollisionBounds)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "preferCollisionBounds"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

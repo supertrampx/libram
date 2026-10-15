@@ -1,0 +1,14 @@
+{
+  "kind": "event",
+  "qualified": "ADDON_RESTRICTION_STATE_CHANGED",
+  "lua": "-- The client says: Fired when the state of an addon restriction type is changing. This event is sequenced such that it will always be fired before a restriction becomes active, or after it is deactivated.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"ADDON_RESTRICTION_STATE_CHANGED\")\nframe:SetScript(\"OnEvent\", function(self, event, type, state)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "type",
+    "state"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

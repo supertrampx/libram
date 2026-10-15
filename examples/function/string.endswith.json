@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "string.endswith",
+  "lua": "-- The client says: Returns true if a string ends with the specified suffix.\nif string.endswith(str, suffix) then\n  -- endsWith is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "str",
+    "suffix"
+  ],
+  "returns": [
+    "endsWith"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_EncounterTimeline.GetTrackInfo",
+  "lua": "-- The client says: Returns information for a single timeline track.\nlocal trackInfo = C_EncounterTimeline.GetTrackInfo(track)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "track"
+  ],
+  "returns": [
+    "trackInfo"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "lualocalecontextapi.FoldCase",
+  "lua": "-- The client says: Case-folds the characters in a string; case-folding is locale-independent and not context-sensitive.\n-- Call this on a LuaLocaleContextAPI object.\nlocal result = object:FoldCase(text)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "text"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_AddOnProfiler.GetOverallMetric",
+  "lua": "-- The client says: Overall profiling data for all addons.\nlocal result = C_AddOnProfiler.GetOverallMetric(metric)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "metric"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

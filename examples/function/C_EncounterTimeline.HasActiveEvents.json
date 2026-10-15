@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_EncounterTimeline.HasActiveEvents",
+  "lua": "-- The client says: Returns true if the timeline contains any events in the active state.\nif C_EncounterTimeline.HasActiveEvents() then\n  -- hasActiveEvents is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "hasActiveEvents"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

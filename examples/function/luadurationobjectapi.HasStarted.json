@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "luadurationobjectapi.HasStarted",
+  "lua": "-- The client says: Returns true once the duration has reached its start time.\n-- Call this on a LuaDurationObjectAPI object.\nif object:HasStarted(modifier) then\n  -- hasStarted is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "modifier"
+  ],
+  "returns": [
+    "hasStarted"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

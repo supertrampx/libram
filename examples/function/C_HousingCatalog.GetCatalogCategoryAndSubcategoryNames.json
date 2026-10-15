@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingCatalog.GetCatalogCategoryAndSubcategoryNames",
+  "lua": "-- The client says: If found, returns the names of the parent category and the specified subcategory.\nlocal categoryName, subcategoryName = C_HousingCatalog.GetCatalogCategoryAndSubcategoryNames(subcategoryID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "subcategoryID"
+  ],
+  "returns": [
+    "categoryName",
+    "subcategoryName"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

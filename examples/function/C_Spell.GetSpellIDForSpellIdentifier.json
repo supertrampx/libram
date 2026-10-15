@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Spell.GetSpellIDForSpellIdentifier",
+  "lua": "-- The client says: Meant primarily for getting a spell id from a spell name or link; Returns nothing if spell does not exist.\nlocal spellID = C_Spell.GetSpellIDForSpellIdentifier(spellIdentifier)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellIdentifier"
+  ],
+  "returns": [
+    "spellID"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

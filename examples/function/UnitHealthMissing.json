@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "UnitHealthMissing",
+  "lua": "-- The client says: Result of UnitHealthMax() - UnitHealth().\n-- Call this on an Unit object.\nlocal result = object:UnitHealthMissing(unit, usePredicted)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "unit",
+    "usePredicted"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "function",
+  "qualified": "C_EncounterTimeline.GetSortedEventList",
+  "lua": "-- The client says: Returns a sorted list of event IDs present in the timeline from shortest to longest remaining durations, meeting the requirements of the specified filters.\nlocal events = C_EncounterTimeline.GetSortedEventList(maxEventCount, maxEventDuration, excludeTerminalStates, excludeHiddenEvents)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "maxEventCount",
+    "maxEventDuration",
+    "excludeTerminalStates",
+    "excludeHiddenEvents"
+  ],
+  "returns": [
+    "events"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

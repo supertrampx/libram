@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "UnitSpellTargetName",
+  "lua": "-- The client says: If the unit is currently casting a spell, returns the name of the spell's target unit. Returns nil if the unit is not casting a spell or the spell has no target.\n-- Call this on an Unit object.\nlocal targetName = object:UnitSpellTargetName(unit)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "unit"
+  ],
+  "returns": [
+    "targetName"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

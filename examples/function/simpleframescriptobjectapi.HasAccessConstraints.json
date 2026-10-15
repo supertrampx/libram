@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "simpleframescriptobjectapi.HasAccessConstraints",
+  "lua": "-- The client says: Returns whether this object has any access constraints that may limit access from some Lua execution contexts.\n-- Call this on a SimpleFrameScriptObjectAPI object.\nif object:HasAccessConstraints() then\n  -- hasAccessConstraints is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "hasAccessConstraints"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

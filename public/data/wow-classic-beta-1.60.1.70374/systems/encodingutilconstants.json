@@ -1,0 +1,1 @@
+{"name":"EncodingUtilConstants","slug":"encodingutilconstants","type":"Definitions","functions":[],"events":[],"tables":[{"name":"EncodingLimits","kind":"Constants","fields":[{"name":"EncodingDecompressSizeLimit","type":"size","value":104857600},{"name":"EncodingStackSizeLimit","type":"number","value":100}]}]}

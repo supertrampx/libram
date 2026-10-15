@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_StringUtil.TruncateWhenZero",
+  "lua": "-- The client says: Formats the given number to a string as an integer (rounding down). If the integer is zero, returns an empty string.\nlocal text = C_StringUtil.TruncateWhenZero(number)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "number"
+  ],
+  "returns": [
+    "text"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

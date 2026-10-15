@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_HouseExterior.IsAnyDecorAttachedToCoreFixture",
+  "lua": "-- The client says: Returns true if any decor is attached to the specified core fixture type, OR any child fixtures attached to it; Will also return false if the type provided is not a core fixture type, or if not in Exterior Customization mode on an owned plot.\nif C_HouseExterior.IsAnyDecorAttachedToCoreFixture(coreFixtureType) then\n  -- anyAttachedDecor is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "coreFixtureType"
+  ],
+  "returns": [
+    "anyAttachedDecor"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "event",
+  "qualified": "TOOLTIP_DATA_UPDATE",
+  "lua": "-- The client says: Sends an update to the UI that a sparse or cache lookup has resolved.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"TOOLTIP_DATA_UPDATE\")\nframe:SetScript(\"OnEvent\", function(self, event, dataInstanceID)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "dataInstanceID"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

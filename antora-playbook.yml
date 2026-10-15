@@ -1,0 +1,40 @@
+site:
+  title: Libram
+  url: http://127.0.0.1:5173
+  start_page: guide::index.adoc
+
+content:
+  sources:
+    - url: ../libram-guide
+      branches: [HEAD, v*]
+      edit_url: false
+
+ui:
+  bundle:
+    url: ./ui/build/ui-bundle.zip
+    snapshot: true
+
+output:
+  dir: .cache/antora-site
+  clean: true
+
+urls:
+  latest_version_segment: latest
+  latest_version_segment_strategy: "redirect:from"
+
+runtime:
+  cache_dir: .cache/antora
+  fetch: false
+  log:
+    failure_level: warn
+
+antora:
+  extensions:
+    - require: '@antora/lunr-extension'
+      index_by_heading: true
+
+asciidoc:
+  attributes:
+    lua-manual: /guide/lua-5.1/manual.html
+    lua-contents: /guide/lua-5.1/contents.html
+    lua-license: /guide/lua-5.1/license.html

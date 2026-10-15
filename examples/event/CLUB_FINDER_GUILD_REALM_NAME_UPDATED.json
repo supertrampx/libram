@@ -1,0 +1,14 @@
+{
+  "kind": "event",
+  "qualified": "CLUB_FINDER_GUILD_REALM_NAME_UPDATED",
+  "lua": "-- The client says: Sends an update to the UI if the realm name of a guild was found asynchronously.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"CLUB_FINDER_GUILD_REALM_NAME_UPDATED\")\nframe:SetScript(\"OnEvent\", function(self, event, clubFinderGUID, realmName)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "clubFinderGUID",
+    "realmName"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

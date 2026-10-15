@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "secondsformatterapi.EvaluateMaxInterval",
+  "lua": "-- The client says: Returns the maximum interval band that a given number of seconds will use for formatting.\n-- Call this on a SecondsFormatterAPI object.\nlocal interval = object:EvaluateMaxInterval(seconds)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "seconds"
+  ],
+  "returns": [
+    "interval"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

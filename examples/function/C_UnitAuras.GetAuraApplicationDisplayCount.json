@@ -1,0 +1,18 @@
+{
+  "kind": "function",
+  "qualified": "C_UnitAuras.GetAuraApplicationDisplayCount",
+  "lua": "-- The client says: Formats a string for displaying the number of applications an aura has present.\nlocal count = C_UnitAuras.GetAuraApplicationDisplayCount(auraInstanceUnit, auraInstanceID, minDisplayCount, maxDisplayCount)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "auraInstanceUnit",
+    "auraInstanceID",
+    "minDisplayCount",
+    "maxDisplayCount"
+  ],
+  "returns": [
+    "count"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

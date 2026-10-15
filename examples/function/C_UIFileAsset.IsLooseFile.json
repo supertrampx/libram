@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_UIFileAsset.IsLooseFile",
+  "lua": "-- The client says: Determines whether a file asset refers to a known loose (local) file.\nif C_UIFileAsset.IsLooseFile(asset) then\n  -- isLooseFile is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "asset"
+  ],
+  "returns": [
+    "isLooseFile"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

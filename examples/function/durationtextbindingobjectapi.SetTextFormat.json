@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "durationtextbindingobjectapi.SetTextFormat",
+  "lua": "-- The client says: Configures the text format used by this duration text binding. The format string may contain '{}' placeholders, each of which is substituted by the corresponding component in the supplied array.\n-- Call this on a DurationTextBindingObjectAPI object.\nobject:SetTextFormat(formatString, components)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "formatString",
+    "components"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

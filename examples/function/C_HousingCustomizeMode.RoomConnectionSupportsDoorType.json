@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingCustomizeMode.RoomConnectionSupportsDoorType",
+  "lua": "-- The client says: Check whether a specific room component, within a specific room, supports a particular doorType.\nif C_HousingCustomizeMode.RoomConnectionSupportsDoorType(roomGUID, componentID, newDoortype) then\n  -- doorTypeSupported is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "roomGUID",
+    "componentID",
+    "newDoortype"
+  ],
+  "returns": [
+    "doorTypeSupported"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

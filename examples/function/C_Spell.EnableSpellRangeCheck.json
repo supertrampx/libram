@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "C_Spell.EnableSpellRangeCheck",
+  "lua": "-- The client says: Used in conjunction with SpellRangeCheckUpdate to inform the UI when a spell goes in or out of range with the current target.\nC_Spell.EnableSpellRangeCheck(spellIdentifier, enable)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellIdentifier",
+    "enable"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

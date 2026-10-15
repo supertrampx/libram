@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "simpleframescriptobjectapi.AddForbiddenAspects",
+  "lua": "-- The client says: Adds forbidden aspects to a script object, restricting access to various functionalities such as script bindings.\n-- Call this on a SimpleFrameScriptObjectAPI object.\nobject:AddForbiddenAspects(aspects)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "aspects"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

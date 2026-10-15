@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_UIFileAsset.GetFileID",
+  "lua": "-- The client says: Returns the numeric file ID associated with a file asset.\nlocal assetFileID = C_UIFileAsset.GetFileID(asset)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "asset"
+  ],
+  "returns": [
+    "assetFileID"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

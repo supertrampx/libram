@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "UnitPowerMissing",
+  "lua": "-- The client says: Result of UnitPowerMax() - UnitPower().\n-- Call this on an Unit object.\nlocal result = object:UnitPowerMissing(unitToken, powerType, unmodified)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "unitToken",
+    "powerType",
+    "unmodified"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

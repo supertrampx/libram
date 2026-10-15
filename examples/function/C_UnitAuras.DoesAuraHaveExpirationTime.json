@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_UnitAuras.DoesAuraHaveExpirationTime",
+  "lua": "-- The client says: Returns true if an aura instance will expire after a certain amount of time.\nif C_UnitAuras.DoesAuraHaveExpirationTime(auraInstanceUnit, auraInstanceID) then\n  -- hasExpirationTime is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "auraInstanceUnit",
+    "auraInstanceID"
+  ],
+  "returns": [
+    "hasExpirationTime"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

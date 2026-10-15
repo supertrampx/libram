@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_Intl.Normalize",
+  "lua": "-- The client says: Writes the normalized form of the source string to the destination string.\nlocal result = C_Intl.Normalize(text, form)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "text",
+    "form"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingBlueprint.RenameBlueprint",
+  "lua": "-- The client says: Rename the specified owned blueprint to the specified name; Listen for HousingBlueprintRenameSuccess and HousingBlueprintRenameFailure for results.\nC_HousingBlueprint.RenameBlueprint(blueprintID, newName)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "blueprintID",
+    "newName"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingBlueprint.ImportBlueprint",
+  "lua": "-- The client says: Imports the specified blueprint, if available (see GetImportAvailability and CanImportTypeFromCurrentLocation); Listen for HousingBlueprintImportSuccess and HousingBlueprintImportFailure for results.\nC_HousingBlueprint.ImportBlueprint(shareCode)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "shareCode"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

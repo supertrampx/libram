@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_EncounterTimeline.GetTrackMaxEventDuration",
+  "lua": "-- The client says: Returns the maximum permitted event duration on a single timeline track.\nlocal maxEventDuration = C_EncounterTimeline.GetTrackMaxEventDuration(track)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "track"
+  ],
+  "returns": [
+    "maxEventDuration"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

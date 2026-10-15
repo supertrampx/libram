@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_EncounterTimeline.AddScriptEvent",
+  "lua": "-- The client says: Adds a custom event to the timeline.\nlocal eventID = C_EncounterTimeline.AddScriptEvent(eventInfo)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "eventInfo"
+  ],
+  "returns": [
+    "eventID"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_HouseEditor.ActivateHouseEditorMode",
+  "lua": "-- The client says: Attempts switch the House Editor to a specific House Editor mode.\nlocal result = C_HouseEditor.ActivateHouseEditorMode(editMode)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "editMode"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

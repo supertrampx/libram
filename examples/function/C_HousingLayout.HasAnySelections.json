@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingLayout.HasAnySelections",
+  "lua": "-- The client says: Returns true if any room, door, or floorplan is currently selected or being dragged.\nif C_HousingLayout.HasAnySelections() then\n  -- hasAnySelections is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "hasAnySelections"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

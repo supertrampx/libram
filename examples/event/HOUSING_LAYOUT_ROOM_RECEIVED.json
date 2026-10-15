@@ -1,0 +1,13 @@
+{
+  "kind": "event",
+  "qualified": "HOUSING_LAYOUT_ROOM_RECEIVED",
+  "lua": "-- The client says: Fired when info for a newly placed room has been recieved while in Layout Mode.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"HOUSING_LAYOUT_ROOM_RECEIVED\")\nframe:SetScript(\"OnEvent\", function(self, event, playAddedSound)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "playAddedSound"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "lualocalecontextapi.FindStringMatches",
+  "lua": "-- The client says: Creates a string search iterator using a collator and returns every match position.\n-- Call this on a LuaLocaleContextAPI object.\nlocal byteOffsets = object:FindStringMatches(text, pattern, strength)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "text",
+    "pattern",
+    "strength"
+  ],
+  "returns": [
+    "byteOffsets"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

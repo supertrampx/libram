@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_EventScheduler.HasData",
+  "lua": "-- The client says: True if the server sent a list, even if the list had 0 events.\nif C_EventScheduler.HasData() then\n  -- hasData is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "hasData"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

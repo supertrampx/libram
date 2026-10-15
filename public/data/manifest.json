@@ -1,0 +1,20 @@
+{
+  "updated": "2026-10-14T19:17:29.640Z",
+  "versions": [
+    {
+      "id": "wow-classic-beta-1.60.1.70374",
+      "product": "wow_classic_beta",
+      "label": "Classic Beta",
+      "version": "1.60.1.70374",
+      "build": "70374",
+      "ingestedAt": "2026-10-14T19:17:29.640Z",
+      "counts": {
+        "systems": 640,
+        "functions": 6604,
+        "events": 1810,
+        "tables": 1753
+      },
+      "latest": true
+    }
+  ]
+}

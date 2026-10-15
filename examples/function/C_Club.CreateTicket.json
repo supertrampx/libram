@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "C_Club.CreateTicket",
+  "lua": "-- The client says: Check canCreateTicket privilege.\nC_Club.CreateTicket(clubId, allowedRedeemCount, duration, defaultStreamId, isCrossFaction)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "clubId",
+    "allowedRedeemCount",
+    "duration",
+    "defaultStreamId",
+    "isCrossFaction"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

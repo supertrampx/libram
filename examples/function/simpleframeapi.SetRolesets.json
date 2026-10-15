@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "simpleframeapi.SetRolesets",
+  "lua": "-- The client says: Sets the roleset tags for this frame, used by the UI mode system to gate visibility. Supports comma-separated names to assign multiple rolesets. Pass nil to clear.\n-- Call this on a SimpleFrameAPI object.\nobject:SetRolesets(rolesetsString)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "rolesetsString"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

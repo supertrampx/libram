@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "housingcatalogsearcherapi.SetAllowedIndoors",
+  "lua": "-- The client says: Search parameter; If true, entries that can be placed in house interiors will be included in the search; Note many decor objects can be placed both indoors and outdoors, so having only this toggled on may still include decor that can also be placed outdoors.\n-- Call this on a HousingCatalogSearcherAPI object.\nobject:SetAllowedIndoors(isActive)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "isActive"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

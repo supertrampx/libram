@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_UIFileAsset.IsKnownFile",
+  "lua": "-- The client says: Determines whether a file asset is known to the client, either as a shipped asset or a locally existing loose file.\nif C_UIFileAsset.IsKnownFile(asset) then\n  -- isValid is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "asset"
+  ],
+  "returns": [
+    "isValid"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

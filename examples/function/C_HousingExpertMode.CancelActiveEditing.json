@@ -1,0 +1,11 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingExpertMode.CancelActiveEditing",
+  "lua": "-- The client says: Cancels all in-progress editing of the selected target, which will reset any unsaved changes and deselect the active target; Will not reset any already-applied changes.\nC_HousingExpertMode.CancelActiveEditing()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

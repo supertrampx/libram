@@ -1,0 +1,1 @@
+{"name":"CursorUtil","slug":"cursorutil","type":"System","functions":[],"events":[],"tables":[{"name":"CursorFileInfo","kind":"Structure","fields":[{"name":"name","type":"string","nilable":false},{"name":"hasBaseBlp","type":"bool","nilable":false}]}],"namespace":"C_CursorUtil","environment":"All"}

@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_AuctionHouse.GetAuctionInfoByID",
+  "lua": "local priceInfo = C_AuctionHouse.GetAuctionInfoByID(auctionID)",
+  "note": "Drafted from the signature when this call was added or its arguments changed. This is not client documentation.",
+  "args": [
+    "auctionID"
+  ],
+  "returns": [
+    "priceInfo"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T08:01:04.594Z"
+}

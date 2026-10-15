@@ -1,0 +1,13 @@
+{
+  "kind": "event",
+  "qualified": "ENCOUNTER_TIMELINE_EVENT_HIGHLIGHT",
+  "lua": "-- The client says: Fired when an event has met a condition that should trigger its highlight glow animation.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"ENCOUNTER_TIMELINE_EVENT_HIGHLIGHT\")\nframe:SetScript(\"OnEvent\", function(self, event, eventID)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "eventID"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

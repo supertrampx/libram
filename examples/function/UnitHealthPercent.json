@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "UnitHealthPercent",
+  "lua": "-- The client says: Returns percent of health remaining - can be scaled via a curve for display purposes.\n-- Call this on an Unit object.\nlocal result = object:UnitHealthPercent(unit, usePredicted, curve)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "unit",
+    "usePredicted",
+    "curve"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

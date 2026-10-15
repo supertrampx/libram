@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "durationtextbindingobjectapi.SetFormatter",
+  "lua": "-- The client says: Configures the text format used by this duration text binding to display the remaining duration using the supplied formatter.\n-- Call this on a DurationTextBindingObjectAPI object.\nobject:SetFormatter(formatter)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "formatter"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

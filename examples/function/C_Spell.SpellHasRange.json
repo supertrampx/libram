@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Spell.SpellHasRange",
+  "lua": "-- The client says: Returns true if the spell has a min and/or max range greater than 0.\nif C_Spell.SpellHasRange(spellIdentifier) then\n  -- hasRange is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellIdentifier"
+  ],
+  "returns": [
+    "hasRange"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "math.wrap",
+  "lua": "-- The client says: Wraps a value into the half-open range [minimum, maximum).\nlocal wrapped = math.wrap(value, minimum, maximum)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "value",
+    "minimum",
+    "maximum"
+  ],
+  "returns": [
+    "wrapped"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

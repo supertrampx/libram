@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "housingcatalogsearcherapi.SetFilteredCategoryID",
+  "lua": "-- The client says: Search parameter; If set, limits search results to only those within the specified category.\n-- Call this on a HousingCatalogSearcherAPI object.\nobject:SetFilteredCategoryID(categoryID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "categoryID"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

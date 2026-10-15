@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "C_ContentTracking.IsNavigable",
+  "lua": "-- The client says: If successful, returns if the trackable is either on your current map, or if we're able to determine a route to that map from your location via waypoints.\nlocal result, isNavigable = C_ContentTracking.IsNavigable(trackableType, trackableID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "trackableType",
+    "trackableID"
+  ],
+  "returns": [
+    "result",
+    "isNavigable"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

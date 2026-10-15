@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "housingcatalogsearcherapi.GetAllSearchItems",
+  "lua": "-- The client says: Returns all catalog entries being searched (note these are NOT search results, this is the source collection of what's being searched).\n-- Call this on a HousingCatalogSearcherAPI object.\nlocal matchingEntryVariantIDs = object:GetAllSearchItems()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "matchingEntryVariantIDs"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

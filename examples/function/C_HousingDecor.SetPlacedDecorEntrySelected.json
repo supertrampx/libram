@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingDecor.SetPlacedDecorEntrySelected",
+  "lua": "-- The client says: Placed Decor List APIs currently restricted due to being potentially very expensive operations, may be reworked & opened up in the future.\nC_HousingDecor.SetPlacedDecorEntrySelected(decorGUID, selected)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "decorGUID",
+    "selected"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

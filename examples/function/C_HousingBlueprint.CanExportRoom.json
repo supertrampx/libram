@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingBlueprint.CanExportRoom",
+  "lua": "-- The client says: Returns true if the specific room is allowed to be exported.\nif C_HousingBlueprint.CanExportRoom(roomGUID) then\n  -- canExport is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "roomGUID"
+  ],
+  "returns": [
+    "canExport"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

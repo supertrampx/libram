@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "secondsformatterapi.SetDefaultAbbreviation",
+  "lua": "-- The client says: Sets the default abbreviation mode used for formatting.\n-- Call this on a SecondsFormatterAPI object.\nobject:SetDefaultAbbreviation(abbreviation)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "abbreviation"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

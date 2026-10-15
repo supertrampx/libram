@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_ActionBar.IsInterruptAction",
+  "lua": "-- The client says: Returns whether the given action button contains a spell that can interrupt spellcasting.\nif C_ActionBar.IsInterruptAction(slotID) then\n  -- isInterruptAction is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "slotID"
+  ],
+  "returns": [
+    "isInterruptAction"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

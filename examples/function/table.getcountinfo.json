@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "table.getcountinfo",
+  "lua": "-- The client says: Returns detailed information about the number and distribution of entries in the table.\nlocal numEntries, numPositiveIntegerKeys, maxPositiveIntegerKey = table.getcountinfo(table)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "table"
+  ],
+  "returns": [
+    "numEntries",
+    "numPositiveIntegerKeys",
+    "maxPositiveIntegerKey"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

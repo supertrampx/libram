@@ -1,0 +1,19 @@
+{
+  "kind": "function",
+  "qualified": "C_ColorUtil.ConvertHSVToHSL",
+  "lua": "-- The client says: Converts an unpacked HSV color to HSL.\nlocal hslH, hslS, hslL = C_ColorUtil.ConvertHSVToHSL(hsvH, hsvS, hsvV)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "hsvH",
+    "hsvS",
+    "hsvV"
+  ],
+  "returns": [
+    "hslH",
+    "hslS",
+    "hslL"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

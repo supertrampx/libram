@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "C_ActionBar.EnableActionRangeCheck",
+  "lua": "-- The client says: Used in conjunction with ActionRangeCheckUpdate to inform the UI when an action goes in or out of range with its current target.\nC_ActionBar.EnableActionRangeCheck(actionID, enable)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "actionID",
+    "enable"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

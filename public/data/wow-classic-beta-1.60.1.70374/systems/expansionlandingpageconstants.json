@@ -1,0 +1,1 @@
+{"name":"ExpansionLandingPageConstants","slug":"expansionlandingpageconstants","type":"Definitions","functions":[],"events":[],"tables":[{"name":"ExpansionLandingPageType","kind":"Enumeration","fields":[{"name":"None","type":"ExpansionLandingPageType","enumValue":0},{"name":"Midnight","type":"ExpansionLandingPageType","enumValue":1}],"numValues":2,"minValue":0,"maxValue":1}]}

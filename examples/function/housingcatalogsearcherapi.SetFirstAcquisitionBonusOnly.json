@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "housingcatalogsearcherapi.SetFirstAcquisitionBonusOnly",
+  "lua": "-- The client says: Search parameter; If true, excludes any entries that do not reward house xp when acquired for the first time.\n-- Call this on a HousingCatalogSearcherAPI object.\nobject:SetFirstAcquisitionBonusOnly(isActive)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "isActive"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

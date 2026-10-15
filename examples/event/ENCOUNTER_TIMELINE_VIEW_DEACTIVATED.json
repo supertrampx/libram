@@ -1,0 +1,13 @@
+{
+  "kind": "event",
+  "qualified": "ENCOUNTER_TIMELINE_VIEW_DEACTIVATED",
+  "lua": "-- The client says: Fired when the current timeline view is being deactivated. The UI should clear all stored timeline event data and release all frames back to pools during this event.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"ENCOUNTER_TIMELINE_VIEW_DEACTIVATED\")\nframe:SetScript(\"OnEvent\", function(self, event, viewType)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "viewType"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

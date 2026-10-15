@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_VoiceChat.SetActiveVoiceProvider",
+  "lua": "-- The client says: Changes the active voice provider without changing the preferred voice provider.\nif C_VoiceChat.SetActiveVoiceProvider(voiceProviderID) then\n  -- success is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "voiceProviderID"
+  ],
+  "returns": [
+    "success"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

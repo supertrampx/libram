@@ -1,0 +1,1 @@
+{"name":"PartyPoseUIConstants","slug":"partyposeuiconstants","type":"Definitions","functions":[],"events":[],"tables":[{"name":"PartyPoseFlags","kind":"Enumeration","fields":[{"name":"HideLeaveInstanceButton","type":"PartyPoseFlags","enumValue":1}],"numValues":1,"minValue":1,"maxValue":1}]}

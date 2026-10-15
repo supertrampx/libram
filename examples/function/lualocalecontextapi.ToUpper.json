@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "lualocalecontextapi.ToUpper",
+  "lua": "-- The client says: Uppercases the characters in a string; casing is locale-dependent and context-sensitive.\n-- Call this on a LuaLocaleContextAPI object.\nlocal result = object:ToUpper(text)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "text"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

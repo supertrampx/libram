@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_ClassTalents.IsConfigPopulated",
+  "lua": "-- The client says: New configs may or may not be populated and ready to load immediately after creation. Avoid calling for configs intentionally created empty.\nif C_ClassTalents.IsConfigPopulated(configID) then\n  -- isPopulated is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "configID"
+  ],
+  "returns": [
+    "isPopulated"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

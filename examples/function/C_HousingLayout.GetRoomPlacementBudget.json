@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingLayout.GetRoomPlacementBudget",
+  "lua": "-- The client says: Returns the max room placement budget for the current owned house's interior; Can be increased via house level.\nlocal placementBudget = C_HousingLayout.GetRoomPlacementBudget()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "placementBudget"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

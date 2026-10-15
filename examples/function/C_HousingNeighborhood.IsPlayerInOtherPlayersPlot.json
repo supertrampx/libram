@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingNeighborhood.IsPlayerInOtherPlayersPlot",
+  "lua": "-- The client says: This returns true if the player is in a plot that is owned by another player.\nif C_HousingNeighborhood.IsPlayerInOtherPlayersPlot() then\n  -- isInUnownedPlot is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "isInUnownedPlot"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

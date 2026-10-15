@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "C_Club.IsBeginningOfStream",
+  "lua": "-- The client says: Returns whether the given message is the first message in the stream, taking into account ignored messages.\nif C_Club.IsBeginningOfStream(clubId, streamId, messageId) then\n  -- isBeginningOfStream is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "clubId",
+    "streamId",
+    "messageId"
+  ],
+  "returns": [
+    "isBeginningOfStream"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

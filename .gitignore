@@ -1,0 +1,13 @@
+node_modules
+dist
+.vite
+.cache
+public/guide
+public/_
+public/search-index.js
+public/sitemap.xml
+public/robots.txt
+ui/build
+.libram-guide
+libram.config.json
+*.log

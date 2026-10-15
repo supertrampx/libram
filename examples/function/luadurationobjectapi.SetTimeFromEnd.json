@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "luadurationobjectapi.SetTimeFromEnd",
+  "lua": "-- The client says: Configures the duration object to represent an end time and a duration.\n-- Call this on a LuaDurationObjectAPI object.\nobject:SetTimeFromEnd(endTime, duration, modRate)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "endTime",
+    "duration",
+    "modRate"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

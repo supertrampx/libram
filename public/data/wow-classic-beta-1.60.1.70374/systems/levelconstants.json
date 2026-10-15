@@ -1,0 +1,1 @@
+{"name":"LevelConstants","slug":"levelconstants","type":"Definitions","functions":[],"events":[],"tables":[{"name":"LevelConstsExposed","kind":"Constants","fields":[{"name":"MIN_RES_SICKNESS_LEVEL","type":"number","value":10},{"name":"MIN_ACHIEVEMENT_LEVEL","type":"number","value":10},{"name":"MIN_TALENT_LEVEL","type":"number","value":10}]}]}

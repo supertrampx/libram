@@ -1,0 +1,1 @@
+{"name":"ModelAnimationShared","slug":"modelanimationshared","type":"Definitions","functions":[],"events":[],"tables":[{"name":"ModelBlendOperation","kind":"Enumeration","fields":[{"name":"None","type":"ModelBlendOperation","enumValue":0},{"name":"Anim","type":"ModelBlendOperation","enumValue":1}],"numValues":2,"minValue":0,"maxValue":1}]}

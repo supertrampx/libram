@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_VoiceChat.RestoreActiveVoiceProvider",
+  "lua": "-- The client says: Changes the active voice provider to the party voice provider, or to the preferred voice provider when the party has none.\nif C_VoiceChat.RestoreActiveVoiceProvider() then\n  -- changed is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "changed"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

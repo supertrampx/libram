@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_SwingTimer.IsTargetWithinSwingRange",
+  "lua": "-- The client says: Whether the current target is within range of the player's auto attack for the given swing type. Auto attacks only ever apply to the current target, so no other unit can be queried.\nif C_SwingTimer.IsTargetWithinSwingRange(swingType) then\n  -- isInRange is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "swingType"
+  ],
+  "returns": [
+    "isInRange"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

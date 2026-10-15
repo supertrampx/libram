@@ -1,0 +1,18 @@
+{
+  "kind": "function",
+  "qualified": "C_ChatInfo.SendAddonMessage",
+  "lua": "-- The client says: Sends a text payload to other clients specified by chatChannel and target which are registered to listen for prefix.\nlocal result = C_ChatInfo.SendAddonMessage(prefix, message, chatType, target)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "prefix",
+    "message",
+    "chatType",
+    "target"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

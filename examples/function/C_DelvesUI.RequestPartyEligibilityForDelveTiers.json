@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_DelvesUI.RequestPartyEligibilityForDelveTiers",
+  "lua": "-- The client says: Queries private party members to see what level they have unlocked for the Delve. Ineligible members are added to the tooltip of dropdown entries.\nC_DelvesUI.RequestPartyEligibilityForDelveTiers(mapID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "mapID"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

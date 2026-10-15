@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_TaxiMap.GetAllTaxiNodes",
+  "lua": "-- The client says: Returns information on taxi nodes at the current flight master.\nlocal taxiNodes = C_TaxiMap.GetAllTaxiNodes(uiMapID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "uiMapID"
+  ],
+  "returns": [
+    "taxiNodes"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

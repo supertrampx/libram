@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_HouseEditor.IsHouseEditorStatusAvailable",
+  "lua": "-- The client says: Returns true if the HouseEditor currently able process mode availability and switching; May be false if not in a house or plot, or while waiting to get house settings back from the server.\nif C_HouseEditor.IsHouseEditorStatusAvailable() then\n  -- editorStatusAvailable is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "editorStatusAvailable"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

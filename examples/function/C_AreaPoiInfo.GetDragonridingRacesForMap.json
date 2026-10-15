@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_AreaPoiInfo.GetDragonridingRacesForMap",
+  "lua": "-- The client says: Returns all area POIInfos flagged as dragonriding races for the given map.\nlocal areaPoiIDs = C_AreaPoiInfo.GetDragonridingRacesForMap(uiMapID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "uiMapID"
+  ],
+  "returns": [
+    "areaPoiIDs"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

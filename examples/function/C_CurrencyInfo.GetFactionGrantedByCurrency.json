@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_CurrencyInfo.GetFactionGrantedByCurrency",
+  "lua": "-- The client says: Gets the faction ID for currency that is immediately converted into reputation with that faction instead.\nlocal factionID = C_CurrencyInfo.GetFactionGrantedByCurrency(currencyID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "currencyID"
+  ],
+  "returns": [
+    "factionID"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

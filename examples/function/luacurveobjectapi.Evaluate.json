@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "luacurveobjectapi.Evaluate",
+  "lua": "-- The client says: Returns a calculated 'y' value from the configured curve points.\n-- Call this on a LuaCurveObjectAPI object.\nlocal y = object:Evaluate(x)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "x"
+  ],
+  "returns": [
+    "y"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

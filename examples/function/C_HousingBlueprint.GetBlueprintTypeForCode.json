@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingBlueprint.GetBlueprintTypeForCode",
+  "lua": "-- The client says: Returns what type of Blueprint the specified code is for; Will return HousingBlueprintType.None if code is invalid; Does NOT check whether the shareCode actually matches up to a real valid Blueprint.\nlocal type = C_HousingBlueprint.GetBlueprintTypeForCode(shareCode)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "shareCode"
+  ],
+  "returns": [
+    "type"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

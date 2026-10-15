@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingCustomizeMode.CommitDyesForSelectedDecor",
+  "lua": "-- The client says: Attempt to save all previewed dye changes made to the selected decor.\nif C_HousingCustomizeMode.CommitDyesForSelectedDecor() then\n  -- hasChanges is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "hasChanges"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

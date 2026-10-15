@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "luacolorcurveobjectapi.RemovePoint",
+  "lua": "-- The client says: Removes a single point from the curve. Raises an error if the supplied point index is out of range.\n-- Call this on a LuaColorCurveObjectAPI object.\nobject:RemovePoint(index)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "index"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

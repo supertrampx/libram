@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Intl.CreateLocaleContext",
+  "lua": "-- The client says: Creates a locale context object for locale-scoped internationalization operations.\nlocal context = C_Intl.CreateLocaleContext(locale)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "locale"
+  ],
+  "returns": [
+    "context"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

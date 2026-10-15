@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "GetMaxLevelForExpansionLevel",
+  "lua": "-- The client says: Maps an expansion level to a maximum character level for that expansion.\n-- Call this on an Expansion object.\nlocal maxLevel = object:GetMaxLevelForExpansionLevel(expansionLevel)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "expansionLevel"
+  ],
+  "returns": [
+    "maxLevel"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

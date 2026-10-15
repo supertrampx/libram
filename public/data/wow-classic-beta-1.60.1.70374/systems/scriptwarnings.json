@@ -1,0 +1,1 @@
+{"name":"ScriptWarnings","slug":"scriptwarnings","type":"System","functions":[],"events":[{"name":"LuaWarning","payload":[{"name":"warningText","type":"cstring","nilable":false}],"literalName":"LUA_WARNING","synchronous":true}],"tables":[],"namespace":"C_ScriptWarnings","environment":"All"}

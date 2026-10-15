@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_PartyInfo.RequestInviteFromUnit",
+  "lua": "-- The client says: Attempt to request an invite into the target party, requires confirmation in some cases (e.g. there is a party sync in progress).\nC_PartyInfo.RequestInviteFromUnit(targetName, tank, healer, dps)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "targetName",
+    "tank",
+    "healer",
+    "dps"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

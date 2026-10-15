@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "securecallmethod",
+  "lua": "-- The client says: Invokes a named method on an object with a secure call barrier that prevents errors or taint from function lookup and execution from propagating to the caller.\n-- Call this on a FrameScript object.\nlocal results = object:securecallmethod(object, method, arguments)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "object",
+    "method",
+    "arguments"
+  ],
+  "returns": [
+    "results"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

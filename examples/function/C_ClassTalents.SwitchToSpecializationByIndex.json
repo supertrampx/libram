@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_ClassTalents.SwitchToSpecializationByIndex",
+  "lua": "-- The client says: Activates specialization for the current class by index in the order within the Specializations tab. Indices start at 1.\nC_ClassTalents.SwitchToSpecializationByIndex(specIndex)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "specIndex"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_ChallengeMode.GetKeystoneLevelRarityColor",
+  "lua": "-- The client says: Returns a color value from the passed in keystone level.\nlocal levelScore = C_ChallengeMode.GetKeystoneLevelRarityColor(level)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "level"
+  ],
+  "returns": [
+    "levelScore"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

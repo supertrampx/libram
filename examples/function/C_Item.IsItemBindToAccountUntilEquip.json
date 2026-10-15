@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Item.IsItemBindToAccountUntilEquip",
+  "lua": "-- The client says: You can use IsBoundToAccountUntilEquip instead if the item exists in your inventory.\nif C_Item.IsItemBindToAccountUntilEquip(itemInfo) then\n  -- isItemBindToAccountUntilEquip is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "itemInfo"
+  ],
+  "returns": [
+    "isItemBindToAccountUntilEquip"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_EncounterEvents.GetEventSound",
+  "lua": "-- The client says: Returns information on a custom sound file to be played when an encounter event trigger occurs.\nlocal sound = C_EncounterEvents.GetEventSound(encounterEventID, trigger)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "encounterEventID",
+    "trigger"
+  ],
+  "returns": [
+    "sound"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_ChatInfo.AreOutgoingAddonChatMessagesRestricted",
+  "lua": "-- The client says: Returns false if addons are allowed to send outgoing chat messages. This is controlled on a realm-by-realm basis (tournament realms allow it), and the ability for addons to receive comms is controlled separately.\nif C_ChatInfo.AreOutgoingAddonChatMessagesRestricted() then\n  -- isRestricted is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "isRestricted"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

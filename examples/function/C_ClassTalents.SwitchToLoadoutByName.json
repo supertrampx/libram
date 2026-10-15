@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_ClassTalents.SwitchToLoadoutByName",
+  "lua": "-- The client says: Loads loadout for the current specialization by name. Loads the first one found in the case of duplicate names.\nC_ClassTalents.SwitchToLoadoutByName(loadoutName)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "loadoutName"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

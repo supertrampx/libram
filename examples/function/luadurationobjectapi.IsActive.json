@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "luadurationobjectapi.IsActive",
+  "lua": "-- The client says: Returns true while the duration is at or after its start time and before its end time.\n-- Call this on a LuaDurationObjectAPI object.\nif object:IsActive(modifier) then\n  -- isActive is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "modifier"
+  ],
+  "returns": [
+    "isActive"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

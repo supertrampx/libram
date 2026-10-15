@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "frameapinameplate.CanChangeHitTestPoints",
+  "lua": "-- The client says: Returns true if this nameplate permits changes to its hit-test points. Updates are normally blocked for tainted code during combat, except on the tick a unit is first assigned or when untainted code updates hit-test points on the same tick.\n-- Call this on a FrameAPINamePlate object.\nif object:CanChangeHitTestPoints() then\n  -- canChangeHitTestPoints is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "canChangeHitTestPoints"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

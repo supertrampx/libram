@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "simpleframescriptobjectapi.HasAnyAccessRestrictions",
+  "lua": "-- The client says: Returns true if this object has any of the supplied access restrictions applied.\n-- Call this on a SimpleFrameScriptObjectAPI object.\nif object:HasAnyAccessRestrictions(restrictions) then\n  -- hasAnyAccessRestriction is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "restrictions"
+  ],
+  "returns": [
+    "hasAnyAccessRestriction"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

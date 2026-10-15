@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "C_Spell.GetSpellDisplayCount",
+  "lua": "-- The client says: Depending on the spell, return a string that is either the use count or number of charges. If value is beyond the display count parameter, returns the replacementString (defaults to '*').\nlocal displayCount = C_Spell.GetSpellDisplayCount(spellIdentifier, maxDisplayCount, replacementString)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellIdentifier",
+    "maxDisplayCount",
+    "replacementString"
+  ],
+  "returns": [
+    "displayCount"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

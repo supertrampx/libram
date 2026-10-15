@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "secondsformatterapi.GetRounding",
+  "lua": "-- The client says: Returns how fractional seconds are rounded when not displaying milliseconds.\n-- Call this on a SecondsFormatterAPI object.\nlocal rounding = object:GetRounding()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "rounding"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

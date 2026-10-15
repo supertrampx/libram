@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_ActionBar.FindAssistedCombatActionButtons",
+  "lua": "-- The client says: Returns the list of action bar slots that contain the Assisted Combat action spell.\nlocal slots = C_ActionBar.FindAssistedCombatActionButtons(setToSearch)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "setToSearch"
+  ],
+  "returns": [
+    "slots"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

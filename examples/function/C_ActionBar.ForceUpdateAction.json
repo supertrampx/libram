@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "C_ActionBar.ForceUpdateAction",
+  "lua": "-- The client says: Force updates some internals for an action button slot.\nC_ActionBar.ForceUpdateAction(slotID, suppressEvents)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "slotID",
+    "suppressEvents"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

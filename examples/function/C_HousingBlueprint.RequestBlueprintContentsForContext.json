@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingBlueprint.RequestBlueprintContentsForContext",
+  "lua": "-- The client says: Request the full contents of a specific Blueprint, either in context of a specific owned House or plot, or explicitly outside of any specific context; Typically used to update missing requirement info from previously-retrieved contents; See RequestBlueprintContents for other notes.\nC_HousingBlueprint.RequestBlueprintContentsForContext(shareCode, optionalHouseGUID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "shareCode",
+    "optionalHouseGUID"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

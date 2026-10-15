@@ -1,0 +1,1 @@
+{"name":"DeathAlert","slug":"deathalert","type":"System","functions":[],"events":[{"name":"HardcoreDeaths","payload":[{"name":"memberName","type":"cstring","nilable":false}],"literalName":"HARDCORE_DEATHS","synchronous":true}],"tables":[],"namespace":"C_DeathAlert","environment":"All"}

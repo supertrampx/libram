@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingCustomizeMode.RoomComponentSupportsVariant",
+  "lua": "-- The client says: Check whether a specific room component supports a particular variant; What kind of id or enum 'variant' equates to is complicated, as it depends on the component type.\nif C_HousingCustomizeMode.RoomComponentSupportsVariant(componentID, variant) then\n  -- variantSupported is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "componentID",
+    "variant"
+  ],
+  "returns": [
+    "variantSupported"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

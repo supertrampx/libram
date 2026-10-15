@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "housingcatalogsearcherapi.SetBaseVariantOnly",
+  "lua": "-- The client says: Search parameter; If true, only the base variant of each decor entry will be included.\n-- Call this on a HousingCatalogSearcherAPI object.\nobject:SetBaseVariantOnly(isActive)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "isActive"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

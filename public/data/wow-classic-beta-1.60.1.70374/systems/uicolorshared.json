@@ -1,0 +1,1 @@
+{"name":"UIColorShared","slug":"uicolorshared","type":"Definitions","functions":[],"events":[],"tables":[{"name":"DBColorExport","kind":"Structure","fields":[{"name":"baseTag","type":"cstring","nilable":false},{"name":"color","type":"colorRGBA","nilable":false,"mixin":"ColorMixin"}]}]}

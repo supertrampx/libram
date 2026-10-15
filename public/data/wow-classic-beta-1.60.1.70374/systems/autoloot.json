@@ -1,0 +1,1 @@
+{"name":"AutoLoot","slug":"autoloot","type":"System","functions":[{"name":"SetUseAutoLootToggle","arguments":[{"name":"useAutoLootToggle","type":"bool","nilable":false}],"flags":{"SecretArguments":"AllowedWhenUntainted"}}],"events":[],"tables":[],"namespace":"C_AutoLoot","environment":"All"}

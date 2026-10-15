@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "unithealpredictioncalculatorapi.GetMissingHealth",
+  "lua": "-- The client says: Returns the base amount of missing unit health.\n-- Call this on an UnitHealPredictionCalculatorAPI object.\nlocal missingHealth = object:GetMissingHealth()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "missingHealth"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

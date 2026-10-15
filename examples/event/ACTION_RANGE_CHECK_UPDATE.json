@@ -1,0 +1,15 @@
+{
+  "kind": "event",
+  "qualified": "ACTION_RANGE_CHECK_UPDATE",
+  "lua": "-- The client says: Used in conjunction with EnableActionRangeCheck to inform the UI when an action goes in or out of range with its current target.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"ACTION_RANGE_CHECK_UPDATE\")\nframe:SetScript(\"OnEvent\", function(self, event, slot, isInRange, checksRange)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "slot",
+    "isInRange",
+    "checksRange"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

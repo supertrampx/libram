@@ -1,0 +1,1 @@
+{"name":"ClassTrial","slug":"classtrial","type":"System","functions":[],"events":[{"name":"ClassTrialTimerStart","literalName":"CLASS_TRIAL_TIMER_START","synchronous":true},{"name":"ClassTrialUpgradeComplete","literalName":"CLASS_TRIAL_UPGRADE_COMPLETE","synchronous":true}],"tables":[],"namespace":"C_ClassTrial","environment":"All"}

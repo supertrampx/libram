@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingCustomizeMode.ApplyWallpaperToSelectedRoomComponent",
+  "lua": "-- The client says: Attempt to apply a specific wallpaper (aka material/texture) to the currently selected room component only.\nC_HousingCustomizeMode.ApplyWallpaperToSelectedRoomComponent(roomComponentTextureRecID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "roomComponentTextureRecID"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

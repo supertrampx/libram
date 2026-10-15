@@ -1,0 +1,1 @@
+{"name":"TalentConstants","slug":"talentconstants","type":"Definitions","functions":[],"events":[],"tables":[{"name":"TalentConsts","kind":"Constants","fields":[{"name":"NumTalentColumns","type":"number","value":{"ref":"Constants.TalentConsts.NUM_TALENT_COLUMNS"}}]}]}

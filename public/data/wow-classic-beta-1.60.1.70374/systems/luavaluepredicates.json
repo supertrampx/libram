@@ -1,0 +1,1 @@
+{"name":"LuaValuePredicates","slug":"luavaluepredicates","type":"Definitions","functions":[],"events":[],"tables":[],"predicates":[{"Name":"SecretWhenLuaTableHasSecretKeys","Type":"Secret","Documentation":["Guarded APIs produce secret values if the subject Lua table contains any secret keys."]}]}

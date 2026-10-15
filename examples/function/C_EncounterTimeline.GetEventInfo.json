@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_EncounterTimeline.GetEventInfo",
+  "lua": "-- The client says: Returns information about a timeline event. This data is generally expected to be static for the lifetime of an event.\nlocal info = C_EncounterTimeline.GetEventInfo(eventID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "eventID"
+  ],
+  "returns": [
+    "info"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

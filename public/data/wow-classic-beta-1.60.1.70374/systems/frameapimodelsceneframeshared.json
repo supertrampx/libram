@@ -1,0 +1,1 @@
+{"name":"FrameAPIModelSceneFrameShared","slug":"frameapimodelsceneframeshared","type":"Definitions","functions":[],"events":[],"tables":[{"name":"ModelLightType","kind":"Enumeration","fields":[{"name":"Directional","type":"ModelLightType","enumValue":0},{"name":"Point","type":"ModelLightType","enumValue":1}],"numValues":2,"minValue":0,"maxValue":1}]}

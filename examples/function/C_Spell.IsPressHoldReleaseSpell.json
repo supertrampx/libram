@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Spell.IsPressHoldReleaseSpell",
+  "lua": "-- The client says: Returns true if the spell is an 'empower' type spell that is cast by pressing and holding, with the on-release cast typically being affected by time held.\nif C_Spell.IsPressHoldReleaseSpell(spellIdentifier) then\n  -- isPressHoldRelease is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellIdentifier"
+  ],
+  "returns": [
+    "isPressHoldRelease"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

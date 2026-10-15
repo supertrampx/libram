@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "C_ClassTalents.GetHeroTalentSpecsForClassSpec",
+  "lua": "-- The client says: Returns the SubTreeIDs of the Hero Talent Specializations available to a Class Specialization and config; Returns nothing if none available.\nlocal subTreeIDs, requiredPlayerLevel = C_ClassTalents.GetHeroTalentSpecsForClassSpec(configID, classSpecID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "configID",
+    "classSpecID"
+  ],
+  "returns": [
+    "subTreeIDs",
+    "requiredPlayerLevel"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

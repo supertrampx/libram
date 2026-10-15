@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "secondsformatterapi.SetApproximationSeconds",
+  "lua": "-- The client says: Configures the formatter to render numeric values between zero and this value as approximated strings (eg. '< 1m').\n-- Call this on a SecondsFormatterAPI object.\nobject:SetApproximationSeconds(seconds)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "seconds"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

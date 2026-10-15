@@ -1,0 +1,1 @@
+{"name":"ExpansionTrial","slug":"expansiontrial","type":"System","functions":[{"name":"OnTrialLevelUpDialogClicked","flags":{"HasRestrictions":true}},{"name":"OnTrialLevelUpDialogShown","flags":{"HasRestrictions":true}}],"events":[],"tables":[],"namespace":"C_ExpansionTrial","environment":"All"}

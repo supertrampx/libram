@@ -1,0 +1,1 @@
+{"name":"MacroConstants","slug":"macroconstants","type":"Definitions","functions":[],"events":[],"tables":[{"name":"MacroConsts","kind":"Constants","fields":[{"name":"MAX_ACCOUNT_MACROS","type":"number","value":120},{"name":"MAX_CHARACTER_MACROS","type":"number","value":30}]}]}

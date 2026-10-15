@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_EncounterTimeline.SetViewType",
+  "lua": "-- The client says: Changes the view type for the timeline. This adjusts track layouts to be more appropriate for a specific mode and optimizes event processing.\nC_EncounterTimeline.SetViewType(viewType)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "viewType"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

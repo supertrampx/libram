@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_Spell.GetLastCategoryCooldownSource",
+  "lua": "-- The client says: Searches for the most recent spellID and itemID that started a cooldown in this category.\nlocal spellID, itemID = C_Spell.GetLastCategoryCooldownSource(spellCategory)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellCategory"
+  ],
+  "returns": [
+    "spellID",
+    "itemID"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

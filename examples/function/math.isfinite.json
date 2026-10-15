@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "math.isfinite",
+  "lua": "-- The client says: Returns whether a value is finite.\nif math.isfinite(value) then\n  -- finite is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "value"
+  ],
+  "returns": [
+    "finite"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,11 @@
+{
+  "kind": "function",
+  "qualified": "C_VoiceChat.MarkChannelsDiscovered",
+  "lua": "-- The client says: Once the UI has enumerated all channels, use this to reset the channel discovery state, it will be updated again if appropriate.\nC_VoiceChat.MarkChannelsDiscovered()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

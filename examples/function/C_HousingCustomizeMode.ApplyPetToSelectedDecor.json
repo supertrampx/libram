@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingCustomizeMode.ApplyPetToSelectedDecor",
+  "lua": "-- The client says: If a decor is selected that supports pets, applies a specific petID to be shown on that decor.\nC_HousingCustomizeMode.ApplyPetToSelectedDecor(petID, petBehavior)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "petID",
+    "petBehavior"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

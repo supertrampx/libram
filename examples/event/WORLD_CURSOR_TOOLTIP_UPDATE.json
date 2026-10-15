@@ -1,0 +1,13 @@
+{
+  "kind": "event",
+  "qualified": "WORLD_CURSOR_TOOLTIP_UPDATE",
+  "lua": "-- The client says: Sends an update when the mouse enters or leaves something in-world (object, unit, etc) that should display a tooltip.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"WORLD_CURSOR_TOOLTIP_UPDATE\")\nframe:SetScript(\"OnEvent\", function(self, event, anchorType)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "anchorType"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_SpellBook.GetSpellBookItemLossOfControlCooldownDuration",
+  "lua": "-- The client says: Returns a duration object describing the active loss of control cooldown duration for a spellbook item.\nlocal duration = C_SpellBook.GetSpellBookItemLossOfControlCooldownDuration(spellBookItemSlotIndex, spellBookItemSpellBank)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellBookItemSlotIndex",
+    "spellBookItemSpellBank"
+  ],
+  "returns": [
+    "duration"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

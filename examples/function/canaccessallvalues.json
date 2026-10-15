@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "canaccessallvalues",
+  "lua": "-- The client says: Returns true if the immediate calling function has appropriate permissions to access and operate on all supplied values.\n-- Call this on a FrameScript object.\nif object:canaccessallvalues(values) then\n  -- canAccessAllValues is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "values"
+  ],
+  "returns": [
+    "canAccessAllValues"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

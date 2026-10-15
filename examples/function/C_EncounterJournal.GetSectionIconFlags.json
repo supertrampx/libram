@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_EncounterJournal.GetSectionIconFlags",
+  "lua": "-- The client says: Represents the icon indices for this EJ section. An icon index can be used to arrive at texture coordinates for specific encounter types, e.g.: EncounterJournal_SetFlagIcon.\nlocal iconFlags = C_EncounterJournal.GetSectionIconFlags(sectionID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "sectionID"
+  ],
+  "returns": [
+    "iconFlags"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

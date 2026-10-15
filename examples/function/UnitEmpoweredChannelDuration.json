@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "UnitEmpoweredChannelDuration",
+  "lua": "-- The client says: Returns a duration object that includes the duration of an empowered cast channel.\n-- Call this on an Unit object.\nlocal duration = object:UnitEmpoweredChannelDuration(unit, includeHoldAtMaxTime)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "unit",
+    "includeHoldAtMaxTime"
+  ],
+  "returns": [
+    "duration"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

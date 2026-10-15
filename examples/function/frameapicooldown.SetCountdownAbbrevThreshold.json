@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "frameapicooldown.SetCountdownAbbrevThreshold",
+  "lua": "-- The client says: Sets the threshold below which cooldown numbers are displayed as an abbreviated form without a unit suffix (eg. '1:31').\n-- Call this on a FrameAPICooldown object.\nobject:SetCountdownAbbrevThreshold(seconds)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "seconds"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

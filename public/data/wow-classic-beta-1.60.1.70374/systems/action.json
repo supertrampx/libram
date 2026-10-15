@@ -1,0 +1,1 @@
+{"name":"Action","slug":"action","type":"Definitions","functions":[],"events":[],"tables":[],"predicates":[{"Name":"HasRestrictions","Type":"Precondition","FailureMode":"ReturnNothing"}]}

@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "C_Club.SetAutoAdvanceStreamViewMarker",
+  "lua": "-- The client says: Only one stream can be set for auto-advance at a time. Focused streams will have their view times advanced automatically.\nC_Club.SetAutoAdvanceStreamViewMarker(clubId, streamId)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "clubId",
+    "streamId"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

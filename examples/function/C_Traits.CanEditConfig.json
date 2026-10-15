@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "C_Traits.CanEditConfig",
+  "lua": "-- The client says: Returns whether the player can make changes to the specified talent config.\nlocal canEdit, errorMessage = C_Traits.CanEditConfig(configID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "configID"
+  ],
+  "returns": [
+    "canEdit",
+    "errorMessage"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

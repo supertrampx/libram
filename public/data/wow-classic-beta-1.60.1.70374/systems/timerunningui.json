@@ -1,0 +1,1 @@
+{"name":"TimerunningUI","slug":"timerunningui","type":"System","functions":[{"name":"GetActiveTimerunningSeasonID","returns":[{"name":"activeTimerunningSeasonID","type":"number","nilable":false}]}],"events":[{"name":"RemixEndOfEvent","literalName":"REMIX_END_OF_EVENT","synchronous":true}],"tables":[],"namespace":"C_TimerunningUI","environment":"All"}

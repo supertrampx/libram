@@ -1,0 +1,1 @@
+{"name":"TalkingHead","slug":"talkinghead","type":"System","functions":[],"events":[{"name":"TalkingheadClose","literalName":"TALKINGHEAD_CLOSE","synchronous":true},{"name":"TalkingheadRequested","literalName":"TALKINGHEAD_REQUESTED","synchronous":true}],"tables":[],"namespace":"C_TalkingHead","environment":"All"}

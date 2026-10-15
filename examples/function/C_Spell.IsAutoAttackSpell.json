@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Spell.IsAutoAttackSpell",
+  "lua": "-- The client says: Returns true if the spell is the player's melee Auto Attack spell.\nif C_Spell.IsAutoAttackSpell(spellIdentifier) then\n  -- isAutoAttack is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellIdentifier"
+  ],
+  "returns": [
+    "isAutoAttack"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

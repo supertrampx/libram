@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Club.GetInvitationInfo",
+  "lua": "-- The client says: Get info about a specific club the active player has been invited to.\nlocal invitation = C_Club.GetInvitationInfo(clubId)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "clubId"
+  ],
+  "returns": [
+    "invitation"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

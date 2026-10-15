@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "canaccesstable",
+  "lua": "-- The client says: Returns true if the immediate calling function has appropriate permissions to index secret tables. This will return false if the caller cannot access the table value itself, or if access to the table contents is disallowed by taint.\n-- Call this on a FrameScript object.\nif object:canaccesstable(table) then\n  -- canAccessTable is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "table"
+  ],
+  "returns": [
+    "canAccessTable"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

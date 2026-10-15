@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "math.lerp",
+  "lua": "-- The client says: Linearly interpolates between two values.\nlocal interpolatedValue = math.lerp(startValue, endValue, amount)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "startValue",
+    "endValue",
+    "amount"
+  ],
+  "returns": [
+    "interpolatedValue"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

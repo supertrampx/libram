@@ -1,0 +1,13 @@
+{
+  "kind": "event",
+  "qualified": "DELVE_ASSIST_ACTION",
+  "lua": "-- The client says: Signaled when an assist action occurs in a delve.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"DELVE_ASSIST_ACTION\")\nframe:SetScript(\"OnEvent\", function(self, event, data)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "data"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

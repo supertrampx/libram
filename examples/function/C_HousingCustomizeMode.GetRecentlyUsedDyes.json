@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingCustomizeMode.GetRecentlyUsedDyes",
+  "lua": "-- The client says: Returns a list of ids for the dyes most recently applied by the player, if any.\nlocal recentDyes = C_HousingCustomizeMode.GetRecentlyUsedDyes()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "recentDyes"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

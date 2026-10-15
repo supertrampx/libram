@@ -1,0 +1,1 @@
+{"name":"ExpansionConstants","slug":"expansionconstants","type":"Definitions","functions":[],"events":[],"tables":[{"name":"ReleaseType","kind":"Enumeration","fields":[{"name":"Original","type":"ReleaseType","enumValue":1},{"name":"Classic","type":"ReleaseType","enumValue":2}],"numValues":2,"minValue":1,"maxValue":2}]}

@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_ChallengeMode.GetSpecificDungeonScoreRarityColor",
+  "lua": "-- The client says: Returns a color value from the passed in mythic+ rating for a specific dungeon.\nlocal specificDungeonScoreColor = C_ChallengeMode.GetSpecificDungeonScoreRarityColor(specificDungeonScore)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "specificDungeonScore"
+  ],
+  "returns": [
+    "specificDungeonScoreColor"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

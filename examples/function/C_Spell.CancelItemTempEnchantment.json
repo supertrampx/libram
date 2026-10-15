@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "C_Spell.CancelItemTempEnchantment",
+  "lua": "-- The client says: Cancel a temporary enchantment on an item.\nC_Spell.CancelItemTempEnchantment(weaponSlot, enchantmentType)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "weaponSlot",
+    "enchantmentType"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

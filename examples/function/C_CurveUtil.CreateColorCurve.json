@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_CurveUtil.CreateColorCurve",
+  "lua": "-- The client says: Returns a new color curve object with no assigned points.\nlocal curve = C_CurveUtil.CreateColorCurve()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "curve"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingCatalog.GetMarketInfoForDecor",
+  "lua": "-- The client says: Returns market info for a specific decor. This is decor-only for now but should be extended to support entry type and recordID generically.\nlocal marketInfo = C_HousingCatalog.GetMarketInfoForDecor(decorID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "decorID"
+  ],
+  "returns": [
+    "marketInfo"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

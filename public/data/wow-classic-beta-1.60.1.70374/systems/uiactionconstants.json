@@ -1,0 +1,1 @@
+{"name":"UIActionConstants","slug":"uiactionconstants","type":"Definitions","functions":[],"events":[],"tables":[{"name":"UIActionType","kind":"Enumeration","fields":[{"name":"DefaultAction","type":"UIActionType","enumValue":0},{"name":"UpdateMapSystem","type":"UIActionType","enumValue":1}],"numValues":2,"minValue":0,"maxValue":1}]}

@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "timedsignalmapapi.SignalAt",
+  "lua": "-- The client says: Schedules the specified key to signal at an absolute time, replacing any existing schedule for that key.\n-- Call this on a TimedSignalMapAPI object.\nobject:SignalAt(key, time)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "key",
+    "time"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

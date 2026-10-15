@@ -1,0 +1,18 @@
+{
+  "kind": "function",
+  "qualified": "C_Club.GetMessagesBefore",
+  "lua": "-- The client says: Get downloaded messages before (and including) the specified messageId limited by count. These are filtered by ignored players.\nlocal messages = C_Club.GetMessagesBefore(clubId, streamId, newest, count)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "clubId",
+    "streamId",
+    "newest",
+    "count"
+  ],
+  "returns": [
+    "messages"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

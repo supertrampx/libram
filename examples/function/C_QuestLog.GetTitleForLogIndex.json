@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_QuestLog.GetTitleForLogIndex",
+  "lua": "-- The client says: Returns a valid title for anything that is in the quest log.\nlocal title = C_QuestLog.GetTitleForLogIndex(questLogIndex)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "questLogIndex"
+  ],
+  "returns": [
+    "title"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

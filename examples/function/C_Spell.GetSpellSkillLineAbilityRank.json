@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Spell.GetSpellSkillLineAbilityRank",
+  "lua": "-- The client says: Returns the rank of a spell that corresponds to an ability within a ranked SkillLine (ex: a crafting Recipe); Returns nil if spell is not found, or isn't part of a ranked SkillLine.\nlocal rank = C_Spell.GetSpellSkillLineAbilityRank(spellIdentifier)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellIdentifier"
+  ],
+  "returns": [
+    "rank"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

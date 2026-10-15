@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingBasicMode.RotateHouseExterior",
+  "lua": "-- The client says: Rotates the House Exterior around the Z (vertical) axis.\nC_HousingBasicMode.RotateHouseExterior(rotDegrees)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "rotDegrees"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

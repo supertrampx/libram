@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Club.GetAvatarIdList",
+  "lua": "-- The client says: listen for AVATAR_LIST_UPDATED event. This can happen if we haven't downloaded the battle.net avatar list yet.\nlocal avatarIds = C_Club.GetAvatarIdList(clubType)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "clubType"
+  ],
+  "returns": [
+    "avatarIds"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

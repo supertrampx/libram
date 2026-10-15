@@ -1,0 +1,1 @@
+{"name":"BNetOutage","slug":"bnetoutage","type":"System","functions":[{"name":"ClearOutage","flags":{"HasRestrictions":true}},{"name":"OutageDetected","flags":{"HasRestrictions":true}}],"events":[],"tables":[],"environment":"All"}

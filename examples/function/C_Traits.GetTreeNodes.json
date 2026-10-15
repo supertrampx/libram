@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_Traits.GetTreeNodes",
+  "lua": "-- The client says: Returns a list of nodeIDs, sorted ascending, for a given treeID. Contains nodes for all class specializations.\nlocal nodeIDs = C_Traits.GetTreeNodes(treeID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "treeID"
+  ],
+  "returns": [
+    "nodeIDs"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

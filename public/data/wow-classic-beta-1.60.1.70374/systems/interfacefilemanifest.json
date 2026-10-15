@@ -1,0 +1,1 @@
+{"name":"InterfaceFileManifest","slug":"interfacefilemanifest","type":"System","functions":[{"name":"GetInterfaceArtFiles","returns":[{"name":"images","type":"table","nilable":false,"innerType":"string"}],"flags":{"MayReturnNothing":true}}],"events":[],"tables":[],"namespace":"C_InterfaceFileManifest","environment":"All"}

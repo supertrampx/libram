@@ -1,0 +1,13 @@
+{
+  "kind": "event",
+  "qualified": "HOUSING_LAYOUT_ROOM_SELECTION_CHANGED",
+  "lua": "-- The client says: Fired when an already placed room has been selected or deselected.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"HOUSING_LAYOUT_ROOM_SELECTION_CHANGED\")\nframe:SetScript(\"OnEvent\", function(self, event, hasSelection)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "hasSelection"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

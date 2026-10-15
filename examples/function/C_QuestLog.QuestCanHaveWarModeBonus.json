@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_QuestLog.QuestCanHaveWarModeBonus",
+  "lua": "-- The client says: Tests whether a quest is eligible for warmode bonuses (e.g. most world quests, some daily quests.\nif C_QuestLog.QuestCanHaveWarModeBonus(questID) then\n  -- hasBonus is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "questID"
+  ],
+  "returns": [
+    "hasBonus"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

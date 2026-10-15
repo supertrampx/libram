@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "C_Intl.CompareStrings",
+  "lua": "-- The client says: Compares two UTF-8 strings using the options specified on a collator.\nlocal result = C_Intl.CompareStrings(left, right, strength)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "left",
+    "right",
+    "strength"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

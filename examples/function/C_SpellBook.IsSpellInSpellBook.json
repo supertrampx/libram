@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "C_SpellBook.IsSpellInSpellBook",
+  "lua": "-- The client says: Returns true if a spell should be found in the spellbook. This function can also return true for spells that aren't known, such as override spells granted by an aura linked to class talents.\nif C_SpellBook.IsSpellInSpellBook(spellID, spellBank, includeOverrides) then\n  -- isInSpellBook is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellID",
+    "spellBank",
+    "includeOverrides"
+  ],
+  "returns": [
+    "isInSpellBook"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

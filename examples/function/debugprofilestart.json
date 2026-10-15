@@ -1,0 +1,11 @@
+{
+  "kind": "function",
+  "qualified": "debugprofilestart",
+  "lua": "-- The client says: Starts a timer for profiling. The final time can be obtained by calling debugprofilestop.\n-- Call this on a FrameScript object.\nobject:debugprofilestart()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "string.contains",
+  "lua": "-- The client says: Returns true if a string contains the specified literal substring.\nif string.contains(str, substring) then\n  -- contains is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "str",
+    "substring"
+  ],
+  "returns": [
+    "contains"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_QuestLog.GetLogIndexForQuestID",
+  "lua": "-- The client says: Only returns a log index for actual quests, not headers.\nlocal questLogIndex = C_QuestLog.GetLogIndexForQuestID(questID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "questID"
+  ],
+  "returns": [
+    "questLogIndex"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

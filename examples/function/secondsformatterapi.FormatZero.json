@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "secondsformatterapi.FormatZero",
+  "lua": "-- The client says: Returns formatted string representing a zero second duration.\n-- Call this on a SecondsFormatterAPI object.\nlocal formattedSeconds = object:FormatZero(abbreviation)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "abbreviation"
+  ],
+  "returns": [
+    "formattedSeconds"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

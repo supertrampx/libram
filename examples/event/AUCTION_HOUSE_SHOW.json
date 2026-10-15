@@ -1,0 +1,11 @@
+{
+  "kind": "event",
+  "qualified": "AUCTION_HOUSE_SHOW",
+  "lua": "frame:RegisterEvent(\"AUCTION_HOUSE_SHOW\")\n-- no payload",
+  "note": "Drafted from the signature when this call was added or its arguments changed. This is not client documentation.",
+  "args": [],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T08:01:04.712Z"
+}

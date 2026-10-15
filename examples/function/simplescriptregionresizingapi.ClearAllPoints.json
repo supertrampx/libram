@@ -1,0 +1,11 @@
+{
+  "kind": "function",
+  "qualified": "simplescriptregionresizingapi.ClearAllPoints",
+  "lua": "-- The client says: Clears all points and immediately invalidates the rect. (Prior to 11.2.0, this would only invalidate rect immediately for AnchoringRestricted regions.).\n-- Call this on a SimpleScriptRegionResizingAPI object.\nobject:ClearAllPoints()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

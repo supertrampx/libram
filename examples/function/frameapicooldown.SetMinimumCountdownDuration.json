@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "frameapicooldown.SetMinimumCountdownDuration",
+  "lua": "-- The client says: Controls the minimum duration above which countdown text will be shown. This is applied based upon the total duration of the cooldown, not the remaining duration as it ticks down.\n-- Call this on a FrameAPICooldown object.\nobject:SetMinimumCountdownDuration(milliseconds)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "milliseconds"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

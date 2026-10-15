@@ -1,0 +1,14 @@
+{
+  "kind": "event",
+  "qualified": "HOUSING_LAYOUT_DOOR_SELECTED",
+  "lua": "-- The client says: Fired when one of the door nodes of an already placed room has been selected.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"HOUSING_LAYOUT_DOOR_SELECTED\")\nframe:SetScript(\"OnEvent\", function(self, event, roomGUID, componentID)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "roomGUID",
+    "componentID"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

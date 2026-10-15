@@ -1,0 +1,6 @@
+The files in this directory, other than css/libram.css, partials/header-content.hbs,
+partials/footer-content.hbs, partials/head-styles.hbs, and helpers/manual-url.js
+and helpers/api-browser-url.js, are the Antora default UI.
+
+That UI is licensed under the Mozilla Public License 2.0.
+Source: https://gitlab.com/antora/antora-ui-default

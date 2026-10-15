@@ -1,0 +1,1 @@
+{"name":"NameGenConstants","slug":"namegenconstants","type":"Definitions","functions":[],"events":[],"tables":[{"name":"NamegenType","kind":"Enumeration","fields":[{"name":"CharacterName","type":"NamegenType","enumValue":0},{"name":"Surname","type":"NamegenType","enumValue":1}],"numValues":2,"minValue":0,"maxValue":1}]}

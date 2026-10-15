@@ -1,0 +1,15 @@
+{
+  "kind": "event",
+  "qualified": "SPELL_RANGE_CHECK_UPDATE",
+  "lua": "-- The client says: Used in conjunction with EnableSpellRangeCheck to inform the UI when a spell goes in or out of range with the current target.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"SPELL_RANGE_CHECK_UPDATE\")\nframe:SetScript(\"OnEvent\", function(self, event, spellIdentifier, isInRange, checksRange)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "spellIdentifier",
+    "isInRange",
+    "checksRange"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

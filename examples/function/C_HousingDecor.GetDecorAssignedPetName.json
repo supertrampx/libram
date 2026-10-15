@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingDecor.GetDecorAssignedPetName",
+  "lua": "-- The client says: Returns pet name for the placed decor instance associated with the passed Decor GUID, if there is one.\nlocal name = C_HousingDecor.GetDecorAssignedPetName(decorGUID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "decorGUID"
+  ],
+  "returns": [
+    "name"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

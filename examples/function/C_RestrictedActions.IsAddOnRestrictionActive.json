@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_RestrictedActions.IsAddOnRestrictionActive",
+  "lua": "-- The client says: Returns true if an addon restriction type is in an active state. Will always return false during dispatch of ADDON_RESTRICTION_STATE_CHANGED.\nif C_RestrictedActions.IsAddOnRestrictionActive(type) then\n  -- active is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "type"
+  ],
+  "returns": [
+    "active"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

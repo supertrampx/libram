@@ -1,0 +1,17 @@
+{
+  "kind": "function",
+  "qualified": "C_Traits.GetStagedChanges",
+  "lua": "-- The client says: Returns IDs of Trait Nodes with pending changes, grouped by the type of change; Returns nothing if there are no pending changes.\nlocal nodeIDsWithPurchases, nodeIDsWithRefunds, nodeIDsWithSelectionSwaps = C_Traits.GetStagedChanges(configID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "configID"
+  ],
+  "returns": [
+    "nodeIDsWithPurchases",
+    "nodeIDsWithRefunds",
+    "nodeIDsWithSelectionSwaps"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

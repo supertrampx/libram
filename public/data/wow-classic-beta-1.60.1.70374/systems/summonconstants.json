@@ -1,0 +1,1 @@
+{"name":"SummonConstants","slug":"summonconstants","type":"Definitions","functions":[],"events":[],"tables":[{"name":"SummonReason","kind":"Enumeration","fields":[{"name":"Spell","type":"SummonReason","enumValue":0},{"name":"Scenario","type":"SummonReason","enumValue":1}],"numValues":2,"minValue":0,"maxValue":1}]}

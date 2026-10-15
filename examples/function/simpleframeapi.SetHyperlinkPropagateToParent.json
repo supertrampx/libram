@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "simpleframeapi.SetHyperlinkPropagateToParent",
+  "lua": "-- The client says: Enables or disables propagating hyperlink events (ex. OnHyperlinkEnter, OnHyperlinkLeave, OnHyperlinkClick) to this frame's parent.\n-- Call this on a SimpleFrameAPI object.\nobject:SetHyperlinkPropagateToParent(canPropagate)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "canPropagate"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

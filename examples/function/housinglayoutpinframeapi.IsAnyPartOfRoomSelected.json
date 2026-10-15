@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "housinglayoutpinframeapi.IsAnyPartOfRoomSelected",
+  "lua": "-- The client says: Returns true if this pin's associated room, or anything attached to it, is selected. Ex: If pin is for a door, returns true if its room, or any other doors on that room, are selected.\n-- Call this on a HousingLayoutPinFrameAPI object.\nif object:IsAnyPartOfRoomSelected() then\n  -- isSelected is true\nend",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "isSelected"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "timedsignalmapapi.GetSignalCount",
+  "lua": "-- The client says: Returns the number of keys currently scheduled to signal.\n-- Call this on a TimedSignalMapAPI object.\nlocal count = object:GetSignalCount()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "count"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

@@ -1,0 +1,1 @@
+{"name":"Platform","slug":"platform","type":"System","functions":[],"events":[],"tables":[{"name":"ClientPlatformType","kind":"Enumeration","fields":[{"name":"Windows","type":"ClientPlatformType","enumValue":0},{"name":"Macintosh","type":"ClientPlatformType","enumValue":1}],"numValues":2,"minValue":0,"maxValue":1}],"namespace":"C_Platform","environment":"All"}

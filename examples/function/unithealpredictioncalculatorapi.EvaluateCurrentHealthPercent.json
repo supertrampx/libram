@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "unithealpredictioncalculatorapi.EvaluateCurrentHealthPercent",
+  "lua": "-- The client says: Calculates the percentage of current unit health and evaluates it against the supplied curve.\n-- Call this on an UnitHealPredictionCalculatorAPI object.\nlocal result = object:EvaluateCurrentHealthPercent(curve)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "curve"
+  ],
+  "returns": [
+    "result"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

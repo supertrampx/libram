@@ -1,0 +1,1 @@
+{"name":"BarberShop","slug":"barbershop-2","type":"System","functions":[{"name":"SetQAMode","arguments":[{"name":"qaModeEnabled","type":"bool","nilable":false}],"flags":{"SecretArguments":"AllowedWhenUntainted"}}],"events":[],"tables":[],"namespace":"C_BarberShopInternal","environment":"All"}

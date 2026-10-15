@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_SpellBook.GetCurrentLevelSpells",
+  "lua": "-- The client says: Returns general, class, and active spec spells that are learned at the specified level.\nlocal spellIDs = C_SpellBook.GetCurrentLevelSpells(level)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "level"
+  ],
+  "returns": [
+    "spellIDs"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

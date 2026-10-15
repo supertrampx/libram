@@ -1,0 +1,1 @@
+{"name":"LuaDurationClockObjectAPI","slug":"luadurationclockobjectapi","type":"ScriptObject","functions":[{"name":"GetTime","documentation":["Returns the current time value represented by this clock."],"arguments":[],"returns":[{"name":"time","type":"FrameTime","nilable":false}]}],"events":[],"tables":[],"environment":"All","extra":{"ObjectType":"Userdata"}}

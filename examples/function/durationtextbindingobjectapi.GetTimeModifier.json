@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "durationtextbindingobjectapi.GetTimeModifier",
+  "lua": "-- The client says: Returns the time modifier used when sampling duration values for this binding.\n-- Call this on a DurationTextBindingObjectAPI object.\nlocal modifier = object:GetTimeModifier()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "modifier"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

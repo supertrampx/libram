@@ -1,0 +1,15 @@
+{
+  "kind": "event",
+  "qualified": "PLAYER_SWING_RANGE_UPDATE",
+  "lua": "-- The client says: Only signaled for swing types that have an active range check. See C_SwingTimer.EnableRangeCheck.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"PLAYER_SWING_RANGE_UPDATE\")\nframe:SetScript(\"OnEvent\", function(self, event, swingType, isInRange, checksRange)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "swingType",
+    "isInRange",
+    "checksRange"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

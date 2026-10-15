@@ -1,0 +1,1 @@
+{"name":"InputInterfaceStyle","slug":"inputinterfacestyle","type":"System","functions":[{"name":"GetCurrentStyle","returns":[{"name":"style","type":"InputDeviceInterfaceType","nilable":false}]}],"events":[],"tables":[],"namespace":"C_InputInterfaceStyle","environment":"All"}

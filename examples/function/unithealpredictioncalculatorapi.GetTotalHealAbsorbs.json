@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "unithealpredictioncalculatorapi.GetTotalHealAbsorbs",
+  "lua": "-- The client says: Returns the base total amount of all applied heal absorption effects.\n-- Call this on an UnitHealPredictionCalculatorAPI object.\nlocal totalHealAbsorbs = object:GetTotalHealAbsorbs()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "totalHealAbsorbs"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "event",
+  "qualified": "AUCTION_HOUSE_NEW_RESULTS_RECEIVED",
+  "lua": "-- The client says: This signal is not used in the base UI but is included for AddOn ease-of-use. Payload is nil for browse queries.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"AUCTION_HOUSE_NEW_RESULTS_RECEIVED\")\nframe:SetScript(\"OnEvent\", function(self, event, itemKey)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "itemKey"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

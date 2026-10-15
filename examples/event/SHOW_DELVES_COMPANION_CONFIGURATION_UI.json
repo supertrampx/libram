@@ -1,0 +1,11 @@
+{
+  "kind": "event",
+  "qualified": "SHOW_DELVES_COMPANION_CONFIGURATION_UI",
+  "lua": "-- The client says: Signaled when SpellScript indicates that a curio has been learned or upgraded. Will show the companion config UI.\nlocal frame = CreateFrame(\"Frame\")\nframe:RegisterEvent(\"SHOW_DELVES_COMPANION_CONFIGURATION_UI\")\nframe:SetScript(\"OnEvent\", function(self, event)\nend)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

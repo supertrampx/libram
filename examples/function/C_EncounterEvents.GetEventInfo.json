@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_EncounterEvents.GetEventInfo",
+  "lua": "-- The client says: Returns information about an encounter event.\nlocal encounterEventInfo = C_EncounterEvents.GetEventInfo(encounterEventID)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "encounterEventID"
+  ],
+  "returns": [
+    "encounterEventInfo"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

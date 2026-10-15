@@ -1,0 +1,15 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingCustomizeMode.GetWallpapersForRoomComponentType",
+  "lua": "-- The client says: Get all wallpapers (aka materials/textures) available for the selected room component type, if any.\nlocal availableWallpapers = C_HousingCustomizeMode.GetWallpapersForRoomComponentType(type)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "type"
+  ],
+  "returns": [
+    "availableWallpapers"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

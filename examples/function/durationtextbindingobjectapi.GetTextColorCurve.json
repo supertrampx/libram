@@ -1,0 +1,14 @@
+{
+  "kind": "function",
+  "qualified": "durationtextbindingobjectapi.GetTextColorCurve",
+  "lua": "-- The client says: Returns the text color curve used by this binding.\n-- Call this on a DurationTextBindingObjectAPI object.\nlocal curve, property = object:GetTextColorCurve()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [
+    "curve",
+    "property"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}

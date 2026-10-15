@@ -1,0 +1,16 @@
+{
+  "kind": "function",
+  "qualified": "UnitEmpoweredStagePercentages",
+  "lua": "-- The client says: Returns a vector of percentages that describe how much of the total duration of an empowered channel is occupied by a stage.\n-- Call this on an Unit object.\nlocal percentages = object:UnitEmpoweredStagePercentages(unit, includeHoldAtMaxTime)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "unit",
+    "includeHoldAtMaxTime"
+  ],
+  "returns": [
+    "percentages"
+  ],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

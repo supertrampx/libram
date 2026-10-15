@@ -1,0 +1,11 @@
+{
+  "kind": "function",
+  "qualified": "C_HousingExpertMode.SelectNextRotationAxis",
+  "lua": "-- The client says: In the rotation submode, swaps the selected axis to the next available one, in order of X -> Y -> Z (wrapping back around to X again, etc); If no axis is selected, selects the first available one, also in that order.\nC_HousingExpertMode.SelectNextRotationAxis()",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:45:14.703Z"
+}

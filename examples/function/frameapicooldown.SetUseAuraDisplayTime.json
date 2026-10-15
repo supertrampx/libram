@@ -1,0 +1,13 @@
+{
+  "kind": "function",
+  "qualified": "frameapicooldown.SetUseAuraDisplayTime",
+  "lua": "-- The client says: Aura durations are displayed slightly differently than cooldown durations. Setting this to true will adjust the display logic to stay in sync with aura timers.\n-- Call this on a FrameAPICooldown object.\nobject:SetUseAuraDisplayTime(useAuraDisplayTime)",
+  "note": "A possible call shaped from the signature. The comment quotes the client description. This is not a script from Blizzard.",
+  "args": [
+    "useAuraDisplayTime"
+  ],
+  "returns": [],
+  "origin": "signature",
+  "addedIn": "wow-classic-beta-1.60.1.70374",
+  "updatedAt": "2026-10-15T12:46:19.830Z"
+}
