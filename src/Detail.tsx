@@ -109,8 +109,8 @@ export function Detail({
       />
     );
   }
-  if (requestedName || loading) {
-    return <p className="px-8 py-10 text-mist">Loading {symbol?.system || "this page"}…</p>;
+  if (symbol && (loading || !system)) {
+    return <p className="px-8 py-10 text-mist">Loading {symbol.system || "this page"}…</p>;
   }
   if (surface || system) {
     return (
