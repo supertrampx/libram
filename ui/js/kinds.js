@@ -24,7 +24,6 @@ function navKind(href, text) {
   if (/tables\.html(?:$|[?#])/.test(path) || label === "Tables") return "table"
   if (/functions\.html(?:$|[?#])/.test(path) || label === "Functions and methods") return "function"
   if (/events\.html(?:$|[?#])/.test(path) || label === "Frames and events") return "event"
-  if (/(?:^|\/)auction\//.test(path) || label === "Auction house") return "system"
   return ""
 }
 
